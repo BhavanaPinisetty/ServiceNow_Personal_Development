@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=18074000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is to trigger a flow when there was any stolen Hardware.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>track_stolen_hardware</internal_name>
+        <label_cache>[{"name":"Created_1.current.cmdb_ci.asset_tag","label":"Trigger - Record Created➛Incident Record➛Configuration item➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"asset_tag","usedInstances":{"5fbd5245-3edc-4863-af09-f0f24d86b2fd":["conditions"],"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["record"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"0a8c5ac3-b785-46cd-b2f1-387d63e6565b":["parent"]}},{"name":"Created_1.current.caller_id","label":"Trigger - Record Created➛Incident Record➛Caller","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"incident","column_name":"caller_id","usedInstances":{}},{"name":"Created_1.current.short_description","label":"Trigger - Record Created➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description","usedInstances":{"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["ah_subject"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"9b197ca8-44c9-43e6-bd72-e863cd59110b":["record"],"95c1e555-141d-4033-8c5d-3df15eb2c0e5":["record"],"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["record"]},"attributes":{}},{"name":"5fbd5245-3edc-4863-af09-f0f24d86b2fd.Record","label":"1 - Look Up Record➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"bd25d6cd-049f-422e-8131-db808db9ca6d":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.cmdb_ci","label":"Trigger - Record Created➛Incident Record➛Configuration item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","parent_table_name":"incident","column_name":"cmdb_ci","usedInstances":{"44745904-ae4f-48e7-911b-1129767f745a":["conditions"],"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["record"]}}]</label_cache>
+        <master_snapshot>389268374758e2101fc731b4116d432a</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Track stolen Hardware</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>c59268374758e2101fc731b4116d43aa</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 22:27:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a97c7be34794e2101fc731b4116d4319</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Track stolen Hardware</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name>sys_hub_flow_a97c7be34794e2101fc731b4116d4319</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:43</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="incident">category=Stolen Hardware<item display_value="Stolen Hardware" endquery="false" field="category" goto="false" newquery="false" operator="=" or="false" value="Stolen Hardware"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c59268374758e2101fc731b4116d43aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:59</sys_updated_on>
+        <table>incident</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>a97c7be34794e2101fc731b4116d4319</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 03:28:43</sys_created_on>
+        <sys_id>b661c17b47d8e2101fc731b4116d43d3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:43</sys_updated_on>
+        <trigger display_value="">c59268374758e2101fc731b4116d43aa</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=a97c7be34794e2101fc731b4116d4319^sys_idNOT INb661c17b47d8e2101fc731b4116d43d3"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a97c7be34794e2101fc731b4116d4319^sys_idNOT INed7c7be34794e2101fc731b4116d431b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a97c7be34794e2101fc731b4116d4319</id>
+        <name>Track stolen Hardware</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 22:27:27</sys_created_on>
+        <sys_id>ed7c7be34794e2101fc731b4116d431b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 22:27:27</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ed7c7be34794e2101fc731b4116d431b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a97c7be34794e2101fc731b4116d4319^sys_idNOT IN1b8228374758e2101fc731b4116d432d,d382ec7b4718e2101fc731b4116d43e7"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</model>
+        <model_id>a97c7be34794e2101fc731b4116d4319</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a97c7be34794e2101fc731b4116d4319</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>1b8228374758e2101fc731b4116d432d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1b8228374758e2101fc731b4116d432d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</model>
+        <model_id>a97c7be34794e2101fc731b4116d4319</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a97c7be34794e2101fc731b4116d4319</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>d382ec7b4718e2101fc731b4116d43e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d382ec7b4718e2101fc731b4116d43e7"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a97c7be34794e2101fc731b4116d4319^sys_idNOT INdf8228374758e2101fc731b4116d4360"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>df8228374758e2101fc731b4116d4360</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:58</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VaXW/bNhT9K4KeNiAD9GFbVt7aJEUDdM3gpNtDGgiUeGkLoylPopR6Rf77Lq0Py7KUyna62ulLAJPS5TmX555LEbn/qnPiA9fP9Tvic9DP9FBIiAXhd8sF4LBUw54gczU3J4ISGcVL/VzGKZzpUUwh1s/NMz0jPIXbZXJN8SV8dPVG8bpeTOPvUAQhBSFxiIbJgpPln8XM9XpmQWJ8W6rIX/VgFnIag9DP7x8QnQofsIC4FhiBbdqWZRjWeGD6I9s3LWoTMAwM0WTVgCNbyK25wBcJggIuxQhPoIV3DITeCL6snphh2nLic/IlCf/F6GNDPccAsQeQz1U/vYJ8PhzMojCAm4UMI5GP5DjzyYinc/Exx6/SBoykXJZpw5E0wXiwUJAViAIRu51Fj5NywXehWLErJnkUEF79IlLGoZ9KSFTCWcgx9V6emyRK4xX6ydXFzeTS++vN3cX7q4k3ubq9m1xf3F1d6k8rXt4/qYqYIyyweDmdp2qv34XA1QaKdO4jmjM9CeJwId8EMsyggPN0ttZknAqM4VX7saXOPHNVCj+ECSbgHjmU6VmFxHn2oQg5SYUW4c7hHy1IY0yO1EpVsOs5mRZJZX+UIlwlpdBPRmLPm3vJMvFmqe9h2qZTzFUoFqn0HHfsmiPSIUsn2EjNqiAw9L2uPzyp3QIOgaxpjn1K6r9+D5MkFNNakiqOSpLbFCt2qF2tzGBONTktrg8bBVg8VFarYXR6z7Z6soYqGhbUw3pMkzEfmGU4irVp2D4zDccYEkZtwwismvVsL9+JSzbUXCf3nBkVI33caLCjGyWrOuI9qqaZ1BJ8vZB7STLb1HMRx1L7X5jexRFCa5i3vZN7V0LMhy839fgctRc2fUIzgm/QkmMfU+9h3o8zEF4CUqpy3t29BZbJ6h2SL1IzOaV3TSWIRbH2MRK/Xa+f024BDQRxnpTN1S29D2kMFmuvirUfyVmzkSmmb3F8g6kq0o49/4l6W6O4ss0s7tHbYDAeuswOHOSM3YwNwCfmwBoS1xnZzG30tsby3cCOvrv19JKs05Xa+krfWs1aS77qMI1OtU85NIRRhLa/0Vd/3qQc1NHL6uts6PuAPY1mz3j0iBrYo8/7JPh7GkepoFv2jzG1UGjrJ7Rfitz+elpOX290qAF4nu/mE6fD8pB+ttZPWZxELPfqZDYzfRcGYODHmY2dzB+6rh8QizFn5IBlNjrZeuFWNEffv3oUStZWaV2fQ60izNq0u8M32o8HeJCvF1JstfV87vhN+iISNJR5h21adDmV6HtWcFALXm5FQCRMMc7n1DBseisjDkJ7T2L6SGLoUcejESEUupzLZ7U6rnNrQSRbaH6XOjZ+0K1vfi+9t9rmEQV+uQ6nb7QQla1HImTiycgjlHq1PPaUZ85t+ypY73+PgIzjgy4TFBTwIlZvupeRhhMaLqKFTCtYA9X8pSZngA7D0WtwQU2tfmIfl/Ujxzbz6iz+qnnn3rx1pYDDK2anRezg24JGCR16zgLqkOHQdtpvDNzmOasNwjcQHv3Za2f/yNrs6Nlv5d3iNmO2fi3X5L+pgZ6XA6+Y9Xc7JbagOP4j42ZdctVUtzrvlIcUyrkX8KciUrb2od2diY3dYGg6Hc40HnY6U7H4c8BkC+3/5SypGlChnDaH+pRPHdd/E7yUJh/+A0tIuAmrIgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=a97c7be34794e2101fc731b4116d4319^sys_idNOT IN2b8228374758e2101fc731b4116d4364,2f8228374758e2101fc731b4116d4365,af8228374758e2101fc731b4116d4362,eb8228374758e2101fc731b4116d4366"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Updated record through flow</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>2b8228374758e2101fc731b4116d4364</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:15:37</sys_updated_on>
+        <ui_id>bd25d6cd-049f-422e-8131-db808db9ca6d</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8HPifFXQpK3QgjsYS1koy9dK2TrOhHIsmdJab2Q/74rW06TtutCyRiD+cGge3XvOefqSHc7jzNv7iXAgnAWTrI4jOMoCKJpEqaTOA0jFlOA0Bt6khaAO2vIyprhekuFsYHdbpynbBwl41EMLBsl00k8onkwG+VBHiVsOkmjnPmrtm6/x0rGVSVoc+saYCTbcMFqkN787n7oVbRGLA21N9+9SOmmAiJoCgILF2VmCpB68GmBPc7V0VeveiEvhVkMXDPXnXAbxJTlEwZDD540SAYIl1OhYOgVVDKqy7rx5ro2GKiBshspmsOODZe6U1rQJ8V/YP8ksPtyQGmZm8JhSdyE+uGUPIObSvNSdhFNU9FPrhSmkNedBDtbyKkR+mi2RmE/qCxlS6JjmH/ZlI+rHm/JZavOsRVlRsVhRbWueWo0KHscIKAdSkGriss1qepyy9tipFL4a4ELPxflI2IqvpY+zSxvHwdE/SXGF234ltbciviMbbB434on343F7WQ4wqTV3Aom7UHhVpXVvNJX2HgLjuZ+6Iycjt8zQDZ7Pu+jns9mpqIgVCnQr2165cIf8+pXiza47tDOZXpS/Avmzq0nMWfW8cXMOv1LZnWM/jG3/s6jQfTuI3V00q0t1ZE/uVSaCkHwr436ZoIgZtMHZdLjgNKlAPmgGkVMhVKAkbTpUlbTSaKUXeK13/8k1AfvEBRIUMOgozg8e5p9gyUHwdQb4+0vkQMgWwdwePUvdpPCSdB+/x//Cz7+9z8Bew3UyMcIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>2f8228374758e2101fc731b4116d4365</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:41</sys_updated_on>
+        <ui_id>2ff6dd24-6c0b-47c2-b81d-6a115437d0b4</ui_id>
+        <values>H4sIAAAAAAAA/+1YXXObOBT9KyrPLsVfOM7TdpPJbGabdqb1dB+aDiMkYdQIRIWI683kv+8VCANxQzx2m8nO+M1Iuveeo3uOQP5y53DqnDoTeuL5YTTBM288GnveyWg+D8fzyDuZzb0hoc7ASXHCYKViRCrzfItFYQbgJ+V5JvD6czNCYi6oYqlz+uXrwMmwgmDNlHN692BKrzMWCBwyAYHnkhQJSzW6PIccuwKroxdYLZlGH2uADwGbUvBMbZGAm0GYMrC8gcN+aJZSBkUjLHI2cBKcUqylWm9GFMP0QyqagZinGlK+zXNJONYsRzpmiCWYC7TiOkYYVeVdx+T7kfN/AcJ4ZFJFDDaBGEQ8JZwCIqc1HNg9henLZprEkhP2IdNcptVGaxyKes+lKJL0fcXadIVFuBC61ZUih7wsMzQNbq0K4BB9iuXqY133gqflhliCQhIsNk9Ya8XDAniWjRQMqyZfUEIyOaESE6zc4wRnGU+XQabkLS8TA8zEXQp4cCMhVxCf82XqYmI4ubDh2L2A8fNy+DNW3BC8gjQQfF9uUPC9MJgqit3iZm1Q9h2W5kTxTL+FxLfMUrgfWL0P532yopNGPq2cfZo/k2nEl4XChgbimiV7u2BhKqL3VcVd0XaCH0FvDdAZs/ofHqT/BYheV+6r5I60hbHR/InX1fwjWv/lGrdA9xb57xEy9DUPKn1abmXxJwX+lKw93w9DP5zOxo1Q5iSiszDy8YyMG2Gs4LRSCVY3QXlatbQ93Ba3NfWecobgNxclvcHOKOtgOPtEQRn6p4bbx8DqO5QSTqa0EffoIHFXSkRaIuidWMORvqlsBpsDX8dYI56jHNrlooVE3IJvRQzQWhYoKXINyzTMdGzTeUtMnsUxtrV29Pynff9fWOpQ60z7z1jcCA/HgZYtwwAJDs3U6zDGtzjFfyyNHFzgsu2k3rX7+esT7G26rL21A42NMeU2J2uhvM5pHTTud1D1IbFloNbh7x2P/87xT5ngCS+bW7nsUPnS3r4zr9NqQn7P93tXijtAqgPPzrbxPSLFyX6H+VGLz6fFYe+djfmdXofPI8YdMNWBfz5QY9gnx+lRji9djtP+1pNOs/Mi/MaIbkny7u4M2qcZDYYuKZQyX3d5LJU2vMqywOr+flu5uwf+khf/0yw3gRuOP+P9iND94yfAS/pcxb3tjkbdE0zSdUvR14XnjUmGDMLXmqfrhDAlpQ5hG27KSXrtXFfL2CKGK80V5nDBgR9w4VEsAw2X9x6490cayah8MJsEvBlF3f9CLjVL4CpUrqn/ynqF/oYGwGVKSHkDk+U9CtLzPC/Yqwrfm6wCsG0si//l4NvPv38trt7V7t2hnZvXU9XMre5a38Y6EY1rZwe+nvzpdOwffdt+P2UrOqJKZpnldtA76ut/pwkQboEXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Retrieve the Asset's Configuration and is stolen</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>af8228374758e2101fc731b4116d4362</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 02:11:50</sys_updated_on>
+        <ui_id>5fbd5245-3edc-4863-af09-f0f24d86b2fd</ui_id>
+        <values>H4sIAAAAAAAA/9VY227bOBD9FUHPjiv5JjtvRQIDBbYN0Gb7kgYERVI2sTSpklTSxPC/71CUZMf3OC6aPnI4lzMzZ8aU7+Yhp+FlSEfRKBuN+sMkirrdKBoMugTHadodkDRKcS9shRLPGGhanAoGxwcsCnfGYoawMcyCjHKTC/z0vbr6WInJlAuqmQwv7+5bYY41eLJMh5fztSv7lDMkcMoEWN+6QMEXF7V1NMgXxpugXYD6iKR3rTR1WKJWyH5ZJimDUBkWhrXCGZYUW6WfGolmmN5IsRRMubTgMXTKvwx/BvfDyOllDNIizN81R1SVyIvJVHHCbnLLlfQSD9RfKlHM5BefgCsuy3AhbF1ckBQG/LHcYXYgKkTZt6l6/FoHHHNZplddCkWwaE7YWs3TwjLjesEEm4EjNMN5zuUE5Vo98NIYsMzaEwGHdibUIwQ1fCLbmDjgbSgRbo9Bfl2Kv2PNXRafwQ0YAyAuoNvIF92oQpdVeUBEFKa80Fga7ytclLVCPwuH0mdd5Yd8iUDBEM1z+xEMHliVyqJV87i/lyKjJSWIkpS7mGaVzI6xgHTyowB7Op9fQcMtoyhuk0JDQW2bzGiKCG83qovFJvNP9nPaqFyt5nJsHbYabytONTQvZNXQxGcbml4U/aGxsbp4f1NzaA58wgeGIaZ7SUCX/TZKW+QrtzINm7w+maFjzgR9scyPAFcb3ziyBenTLrwVQTMXY22rd/76rf4u6QmAKPL15lJwWf6oAtDz8La/lxppvMaDsv1L1pYybMiWrRxYFTyfvmXLvtb8PQJkbfgNEAW3HuUW4PV+rd1X1O2ejbrdzuuoC8S5mzfom6ptKXD9dnKtq/WfnT5e1wd2rRjEi/uG+lenxYxfG7PjYq7NZvdVw7nKLH9zvYNgZ36Z7Ri21u+c7imYVvGQH1b0yOmE2WX0Wosq+4jFf9vuK3Y1M1Sm9+ZXXrz3QyBdeeXxDM2gTzyHp6dmBKhgENYMZaqQFFWPziVtXN8yro2tlDd3yFdmCy0DBSMX2CkLSu2g0T7HZjkiu9rwUxbU6VUYTADpBWV6QZPe64qxYx/1zvjWe8s+GmMuytLDx0O+0jumtdI7dtKBru1p/5EL60hQ8VlBvX2jbeP71s12AOtf8SX61q1DGE57HTxIunEcRXFEk2iYJPFwkGYDnPSy5aAhZCSBtQieMyAGuEc1EequRpurxe/Gk/8ugZ37YVy5OBZvbXytpPtS7SQ2cIChz0EN+HBK1b5IlRIMyyU9+39sYbyXf1QKfrteGy/6Z1vTftePecH/lfxnwT45UgxZ1BnGlFwMkzi56GV0cDGiuH+BR2k/6VJGetnpv8/3/wMRLRvlTxQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>eb8228374758e2101fc731b4116d4366</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 02:16:32</sys_updated_on>
+        <ui_id>0a8c5ac3-b785-46cd-b2f1-387d63e6565b</ui_id>
+        <values>H4sIAAAAAAAA/+1VUWvbMBD+K0HPxrOTOGnzVloCe1gL69Y9NI2R7XMiJkueJKfNgv/7TpLdtOvahTLoBoNA0N3p0/edPp2vd4QVZEZgOqKT0ShJRnEUjfCXlXFxHEfHkCdH0yQnARG0Aqw0VH9NDc04YGxDeWODVGswqU1hsGC65nR79atcvma8UCDI7PomIDVVCGpAkdnup5TZ1pBymgFHiE/2uMG5JRAczPfR5mf421NcDJep8PhSFZZQFBC4MyAKwPNKyjUEpKKioEaqLZkZ1WBAAS0uBN/eV6yZMAhIbO2dZt8R/SiydSWgtBx87n6Zdr3y4XwtWQ4XtWFS+Ijn6ZOSN5U49yJsl6GkDTd9lzHSaMSD2lK2JDpG5eVa3n7sD5wz4dR1SS5zyu9X1BjFssaAtveRUcTrCXTXBxwqBE8rWtdMrNJayQ1zgMivClccF2HJ5S0S0WwlQppbMSF2jYZzjJ+58BVVzAJ/QBjc3LqOpN8ay8Vr61SkvhFYoHPFanOCcBvoCLdBZ97hi2aYZPvLLxnwInWu1Q/sq9dSGUvZHYKEFw2iFO/FBrRhK2pgcGkkBzE4sWZeoqVRBRSpkb5yt+hdvyCzBbmEvFHMbAenqAHU4AzlD04l5+DaMfisQS1IsPAE3JbpMIYJZBAn4/FwGEfjcjSOk3IaA82L4/zIlbvbcOV6q9OmR7ELVhwI0y61QUGed7zEJ4gcOxW7UzS0QV1xiAJsIhRNlYFq26fv+n/TDmnaKwceVNgX7KBvdnCwz3uAuTW6362ftX8//brDfGI/AeOXJ2AXOWQETpIoeqMp6Of0q4fg2wy8B9+o34y+snzJEtPp/u5vKTMPRl709EE75NdbFhv9bt5BHMqt3/zFk3tMtbNnJnGIULH35fCP+XL8j36a/5bPsH9cPmZ5uYvD/6dVbdve/AACw0lQbAoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a97c7be34794e2101fc731b4116d4319"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a97c7be34794e2101fc731b4116d4319^sys_idNOT IN178228374758e2101fc731b4116d432c,db8228374758e2101fc731b4116d432f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a97c7be34794e2101fc731b4116d4319</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>178228374758e2101fc731b4116d432c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a97c7be34794e2101fc731b4116d4319</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:52</sys_created_on>
+        <sys_id>db8228374758e2101fc731b4116d432f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a97c7be34794e2101fc731b4116d4319"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a97c7be34794e2101fc731b4116d4319"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a97c7be34794e2101fc731b4116d4319"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is to trigger a flow when there was any stolen Hardware.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>track_stolen_hardware</internal_name>
+        <label_cache>[{"name":"Created_1.current.cmdb_ci.asset_tag","label":"Trigger - Record Created➛Incident Record➛Configuration item➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"asset_tag","usedInstances":{"5fbd5245-3edc-4863-af09-f0f24d86b2fd":["conditions"],"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["record"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"0a8c5ac3-b785-46cd-b2f1-387d63e6565b":["parent"]}},{"name":"Created_1.current.caller_id","label":"Trigger - Record Created➛Incident Record➛Caller","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"incident","column_name":"caller_id","usedInstances":{}},{"name":"Created_1.current.short_description","label":"Trigger - Record Created➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description","usedInstances":{"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["ah_subject"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"9b197ca8-44c9-43e6-bd72-e863cd59110b":["record"],"95c1e555-141d-4033-8c5d-3df15eb2c0e5":["record"],"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["record"]},"attributes":{}},{"name":"5fbd5245-3edc-4863-af09-f0f24d86b2fd.Record","label":"1 - Look Up Record➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"bd25d6cd-049f-422e-8131-db808db9ca6d":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.cmdb_ci","label":"Trigger - Record Created➛Incident Record➛Configuration item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","parent_table_name":"incident","column_name":"cmdb_ci","usedInstances":{"44745904-ae4f-48e7-911b-1129767f745a":["conditions"],"2ff6dd24-6c0b-47c2-b81d-6a115437d0b4":["record"]}}]</label_cache>
+        <master>true</master>
+        <name>Track stolen Hardware</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Track stolen Hardware">a97c7be34794e2101fc731b4116d4319</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>389268374758e2101fc731b4116d432a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:43</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=389268374758e2101fc731b4116d432a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=389268374758e2101fc731b4116d432a"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=389268374758e2101fc731b4116d432a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=389268374758e2101fc731b4116d432a^sys_idNOT INf89268374758e2101fc731b4116d432b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>389268374758e2101fc731b4116d432a</id>
+        <name>Track stolen Hardware</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:58</sys_created_on>
+        <sys_id>f89268374758e2101fc731b4116d432b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f89268374758e2101fc731b4116d432b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=389268374758e2101fc731b4116d432a^sys_idNOT IN0d9268374758e2101fc731b4116d433a,bc9268374758e2101fc731b4116d432c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</model>
+        <model_id>389268374758e2101fc731b4116d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_389268374758e2101fc731b4116d432a</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>0d9268374758e2101fc731b4116d433a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0d9268374758e2101fc731b4116d433a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</model>
+        <model_id>389268374758e2101fc731b4116d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_389268374758e2101fc731b4116d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:58</sys_created_on>
+        <sys_id>bc9268374758e2101fc731b4116d432c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bc9268374758e2101fc731b4116d432c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=389268374758e2101fc731b4116d432a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=389268374758e2101fc731b4116d432a"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=389268374758e2101fc731b4116d432a^sys_idNOT IN8d9268374758e2101fc731b4116d4349"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>8d9268374758e2101fc731b4116d4349</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:59</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VaXW/bNhT9K4KeNiAD9GFbVt7aJEUDdM3gpNtDGgiUeGkLoylPopR6Rf77Lq0Py7KUyna62ulLAJPS5TmX555LEbn/qnPiA9fP9Tvic9DP9FBIiAXhd8sF4LBUw54gczU3J4ISGcVL/VzGKZzpUUwh1s/NMz0jPIXbZXJN8SV8dPVG8bpeTOPvUAQhBSFxiIbJgpPln8XM9XpmQWJ8W6rIX/VgFnIag9DP7x8QnQofsIC4FhiBbdqWZRjWeGD6I9s3LWoTMAwM0WTVgCNbyK25wBcJggIuxQhPoIV3DITeCL6snphh2nLic/IlCf/F6GNDPccAsQeQz1U/vYJ8PhzMojCAm4UMI5GP5DjzyYinc/Exx6/SBoykXJZpw5E0wXiwUJAViAIRu51Fj5NywXehWLErJnkUEF79IlLGoZ9KSFTCWcgx9V6emyRK4xX6ydXFzeTS++vN3cX7q4k3ubq9m1xf3F1d6k8rXt4/qYqYIyyweDmdp2qv34XA1QaKdO4jmjM9CeJwId8EMsyggPN0ttZknAqM4VX7saXOPHNVCj+ECSbgHjmU6VmFxHn2oQg5SYUW4c7hHy1IY0yO1EpVsOs5mRZJZX+UIlwlpdBPRmLPm3vJMvFmqe9h2qZTzFUoFqn0HHfsmiPSIUsn2EjNqiAw9L2uPzyp3QIOgaxpjn1K6r9+D5MkFNNakiqOSpLbFCt2qF2tzGBONTktrg8bBVg8VFarYXR6z7Z6soYqGhbUw3pMkzEfmGU4irVp2D4zDccYEkZtwwismvVsL9+JSzbUXCf3nBkVI33caLCjGyWrOuI9qqaZ1BJ8vZB7STLb1HMRx1L7X5jexRFCa5i3vZN7V0LMhy839fgctRc2fUIzgm/QkmMfU+9h3o8zEF4CUqpy3t29BZbJ6h2SL1IzOaV3TSWIRbH2MRK/Xa+f024BDQRxnpTN1S29D2kMFmuvirUfyVmzkSmmb3F8g6kq0o49/4l6W6O4ss0s7tHbYDAeuswOHOSM3YwNwCfmwBoS1xnZzG30tsby3cCOvrv19JKs05Xa+krfWs1aS77qMI1OtU85NIRRhLa/0Vd/3qQc1NHL6uts6PuAPY1mz3j0iBrYo8/7JPh7GkepoFv2jzG1UGjrJ7Rfitz+elpOX290qAF4nu/mE6fD8pB+ttZPWZxELPfqZDYzfRcGYODHmY2dzB+6rh8QizFn5IBlNjrZeuFWNEffv3oUStZWaV2fQ60izNq0u8M32o8HeJCvF1JstfV87vhN+iISNJR5h21adDmV6HtWcFALXm5FQCRMMc7n1DBseisjDkJ7T2L6SGLoUcejESEUupzLZ7U6rnNrQSRbaH6XOjZ+0K1vfi+9t9rmEQV+uQ6nb7QQla1HImTiycgjlHq1PPaUZ85t+ypY73+PgIzjgy4TFBTwIlZvupeRhhMaLqKFTCtYA9X8pSZngA7D0WtwQU2tfmIfl/Ujxzbz6iz+qnnn3rx1pYDDK2anRezg24JGCR16zgLqkOHQdtpvDNzmOasNwjcQHv3Za2f/yNrs6Nlv5d3iNmO2fi3X5L+pgZ6XA6+Y9Xc7JbagOP4j42ZdctVUtzrvlIcUyrkX8KciUrb2od2diY3dYGg6Hc40HnY6U7H4c8BkC+3/5SypGlChnDaH+pRPHdd/E7yUJh/+A0tIuAmrIgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=389268374758e2101fc731b4116d432a^sys_idNOT IN059268374758e2101fc731b4116d4347,099268374758e2101fc731b4116d4348,459268374758e2101fc731b4116d4346,c59268374758e2101fc731b4116d4349"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Updated record through flow</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>059268374758e2101fc731b4116d4347</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:59</sys_updated_on>
+        <ui_id>bd25d6cd-049f-422e-8131-db808db9ca6d</ui_id>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K8jntspHW5XeEBXSSixIsOLCQjSJJ2DJcbL+KHSr/vedJE4JFLFFYg/V9lDJbzz2ey9vkts1E5zN2Rh5EB6H0ywO4zgKgmg2DtNpnIYRjwExZAOmoEDaqTErNaf1EqSrgfV6kqd8Eo0nwxh5NhzPpvEQ8uB4mAd5NOazaRrlfHTV9G021MmFqSSsbvwBhGSPQnKNis1v7wasAk13WdRsvn5T2peshBQlbb3q2L5lb1dVveZl5gpUNhEdeO47F75y9G1BFWqq6YTBgOGzRcWRiOQgDQ5YAYqDLfWKza12BGgEfqnkarvjUSjbCi3g2YjfdPM4qPflSMoyb8J2mXiDWjhfgIVrOjmzTm/9KkWGpvWEYw5O2tM+1m64rKwoVdtiIZVddyldoS5aR9j2gN7zcIZIYFXrrJm3svLrx/LpqiN5JlRjiZcoywzkdgXWapE6W9NZM5TYeFxAVQn1kFS6XIqmmagUowdJi1Euyye604gHNYKs5j0iV2F0RviigW9Ai1rEdzqGmjcDZlbmVIIxL1LIw+SXq5m0wryEpHGhsSBpklA3Z1pU9oSuWqInvhn4cUgnHyUsO34JVO/Ml5EAWSREC+1u2E88/LnE78GnS/yP5jm/z8+Hfgc77/ceXbQFH/nJl0V+dkiR9zIOPvN/S3oQffgu7SWpCbfppVwoY0HKhP6tMz9dEMR8dm9c2geMLSWqe2KduIrEIU/SVVuqVb4qlKot7E7Nv7zqc5O4h1/dJJ4JlNy8Y2A3hliQRotJa+ibUfTFoxtf3H6Bvmwew2nQ/A5oKv+bD9HdH31JOMWZCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>099268374758e2101fc731b4116d4348</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 03:28:43</sys_updated_on>
+        <ui_id>2ff6dd24-6c0b-47c2-b81d-6a115437d0b4</ui_id>
+        <values>H4sIAAAAAAAA/+2YXW/bNhSG/wqra8+Vv+NcrbURLFjSArXRXTSFQZGUxYUSNZKK6wX57zuUqA/bqWs3HpZgubP4+Z7D99ER/eXe49Q79/r0zB8GYR+P/F635/tn3fE46I1D/2w09juEei0vwTGDkYoRqezzHRaZbYCflOtU4PXnuoVEXFDFEu/8y9eWl2IFkw1T3vn9VtehuwscMAFD51gtmUGfShXbqsw6tc9UkixmiVnwsvHKLTB1PehyCj0wyaryWx77ZlhCGcgJsdCs5cU4odhIta5aFMP0YyLqhognBpZ8p7UkHBumkYkYYjHmAq24iRBGhbC2Z9f7pvnfIK7XtUuFDHJArFaeEE5BkddoXriUQvdl3R1OscEzozJiMlVlWnLCdJFNykKcCTNpthUDPqaGy6SYYnAgytlSZHHyoUiiVy3QOMlMgxiW2tzYYGFzCDycRXL1qRR7wZM8iy4rQhIsqqdwxrAi0QVnwh51ksUBjG152BjFg8xYmWAKAaPqfRa5VLsXjGSC5UcZ4zTlyXKRKnnH8w1BftxeCnhoh0KuYL7my6SNiY21DaeH2xfQPs2bP2PFbeDXsAxMfmh5eq0nAmtdhw/5X/yVWfVFMjbl2NmL3HB2MlE8Ne9gqzvmgn1oOZo6431+pv3at4019xE1kUnIl5nCNjDEDYuPZuwATTVj1h+Pa3R87bRdNeeiD0WHo6tzJF2FxxxccyDKFNAXLCHj5FVAnfmbQH0HpOcBUIXFwQRtkvLv0AAm0YvC0i62fPOfoORHbPjDYRAMg8GoV/twTEI6CsIhHpFe7bsVvFFVjNXtIn+jNgDp7BLi3hXHMXGAlpIJeAuLjDL0Rylqn04HSSAlvNaSbUJA6duLPLsVId0n1Z/CmshIBIcp1lB1Kkm2sa5JJsIGcY00nFYbzSXiLqrGjBZaywzFmTYwzEDPBnwbhaz/fLlzdnCt00e98iLAPD2Ag/2FANfGxtHCyAZ2EBYHT5h1EOE7nOBfl9ZVbYhul8e9Y4+j9ADBVeWSu+odjBrOKllusTgrGx2Hvf0cFoVpB8NGIfKfLxIvxfFWuOAxzw1RsHp6COheTzF/w0aEnPa6c8DmpaEnk10lxxi6/3OF5dXRL87Rnb13aDbc8FFwaksfsHtp6fdbng6ONvXg1dT/E1MP9tuKbBhJZ8GfjJiGse/vJ+ACw+ii0yaZUvazV0dSGRtpvi3E+fCw6//DJx75KfPjeEpMZlU0j0V4DC7D14+a/5yW06OB91op7G6+YyVdN7i4yXy/R1JkNf9ieLKOCVNSmgASc5t30hvvphjG5hHcGK8xh/sj/ID7pGIpkJBfK+cRCw2SYf5g0waZYBRt/l11aVgMN818TPln5hv0OxwJ3FWFlLfQmV9TYXmudcbeFPrepoWAXTyd/uej77i3wAFHVxXL4uB2TtLxH5lYbNH/2/z6qmZ/9MRSORwMesNX+p9cK9MV7VIl09TFduJ6+fUf1O7+jsgZAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Retrieve the Asset's Configuration and is stolen</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>459268374758e2101fc731b4116d4346</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 02:17:13</sys_updated_on>
+        <ui_id>5fbd5245-3edc-4863-af09-f0f24d86b2fd</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjiv527kVCQwUaBugyfbSFgRFUjaxNKlSVFLH8H/foUjJhq3Y1q4DJNgjh0Pyzcx7Q0o/1iGn4XVIp9E0nU6Hk3EU9ftRNBr1CY6TpD8iSZTgQdgJJV4y8DQ4EQyGj1gUdozFEuE8ZwZslOeZwKvvfuqjN5MFF1QzGV7/+NUJM6xhJ8N0eL3emzoXisAJE+D64LHsQTOrrB6ics7ZPu8uC766CaWphRJ1QvbHMEkZYEixyFknXGJJsVF6VVs0w/ROiq1hwaWBHUPr/Cfnz3DuJLJ+KYOoCHNz9RD5DDlzeosNvje6IKbQ3pUsFCcsd/mgLMWFMDe7NudwlxmupFviwnarlSiW8qtLR1hvUBUELEUOIFhmA7XIfRjp/UI9fatQzrgsc+InhSJY1CNsjOZJYSyedcgEW8JGaImzjMs5yrR65OViwLLszgUMuqlQT3Bozueyi4kF3oW84u4M7Lel+TvW3EbxBbaBxQCIC2AIciXMVaHLVD4iIoq8nNBY5m6vcNMJ81V+I4CF28gh5eh3YXG7PPiIkUuaXUI0z8xH2OKR+eA2nUoNw6MUnG4pR5Sk3KLIdyVheQ/Y5z8LWE/X6xvgjWEUxV1SaEix6ZIlTRDh3dp1sznUz7/ep6XgTkdbCe5mN9ymFHjpHdg+N23gpRdfTHqDKHpP4oPD35722qvJpeCEpGJ6lGR0y6dcaYNcLnc0daiO1jw/A0LF8zvLzCBZvYTK0zzlTNCmG2ZmJ/ZumN7/84Z5kyQHQBS56nEpuCyfCwD0tdg/PEq9JN7jWUmvLfdLG85Jww0RGBU8t1bCGXAqJdzD2cGDw9MAser3JWX2e31l9ALoX0wA/d5lBLCuw6wT2ZDz6oVoq1n5P1t/vO8PFNxZEG+aBNbqzLjtmb3NoYD7rRS8SzY3c/sC5y78lHxBkZ3XbAELWOrPQ06/6InTOTPb0ysvqswTFn83zXvGoapQZXiv8CyNj34ZJTvPUp6iJVSOZ/B61owAOXKENUOpKiRF/t28JZKtZMp1brzzYaP5xkA/MlAgzMAsWFB6B7V3y4v4dBxVKj+lQRWIPy0PIJCgDCSoA2kXdpumNbjg4/TSTWuGuSirAZ9E2U45mdZKv9C4ThTyCCPO7GpngoovCuq/t70mCTS2vxNY38X39eVbE2E4GfTwaNyP4yiKIzqOJuNxPBkl6QiPB+lWowjlkkA3hZ1ToApsjypqVHWODvuPa6ltG80ZqCoK3ippv7J7YxNYWFDfoIJ1GrhvKIlSgmG511Ee4J74MPP4PV+Hb66rvIu/TQV/2M+0MzXm+rXeDQX/S/LfBftkKTZhUW8SU3I1Gcfjq0FKR1dTiodXeJoMx33KyCC95FPg1z+7sa9nsRUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Track stolen Hardware">389268374758e2101fc731b4116d432a</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>c59268374758e2101fc731b4116d4349</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 02:17:13</sys_updated_on>
+        <ui_id>0a8c5ac3-b785-46cd-b2f1-387d63e6565b</ui_id>
+        <values>H4sIAAAAAAAA/+1WXWvbMBT9K0bPwbPz2eatpAQGWwvL1j00jZHt60RMlj1JTpsF//ddWXKSNaVLtz20MAgE3Xt1fc7V0bFvt4SlZExg1KPDXm8w6IVB0MNfnIXpeRicQzI4Gw0S0iGC5oCVmqpvkaYxB4ytKa9MkCoFOjIpDKZMlZxubp7KJSvGUwmCjG/vOqSkEptqkGS8fZQ6FRWnMXAs/ewQPYVSb0obw2XUFNjYh8O93pVNFDI1eIIOgQcNIgUEklGuoENyKlKqC7khYy0rDEig6bXgm13FigmNDYmpfVDsBz72LDB1GSCzBGxut4zcqGw4u6SazrBzoivpSpNVwRJQdiYpZLTienIYswXXpWaFsFssa7u74FUuruxIyK5BezIYqRSCgNLwNMgdjWy2Ku4/tSinTDQjcUleJJTvVlRryeJKGzxbElPs1wJwRw4ccmwe5bQsmVhGpSzWrGmI+HJ/yXHhZ7y4RyCKLYVPE0PGx1FTf4rxyyZ8QyUzjT9iG9xcd4jaqAlHde354WCj75VBZ9k6XpEdjdmSSFbqC3zAGhyFuuOuQPdZsQ3jvbgyBjyNGu2rg0ugVoXUhkTzEKQwr7BL+l6sQWm2pBq8mS44CO/CXIkFQkdekEa6sJXbeXt35mQ8JzNIKsn0xpsgB5CekYc3KTiHZkDeFwVyTjpzC6DZMuqGMIQYwkG/3+2GQT/r9cNBNgqBJul5ctaUN+fTlOMEo6rtYhYsPbFNvVAaCVnc4QIvMmJ0LLYTvBcaeYU+EjAJX1R5DLKuj93h/9BOGdrLbPMEJbe2OTVS9m5aKT8t8NY/Iccxa7CJxx7qkrbX3kfD533URU4x0uEgCN6Sl9pXxB9b6WuxzYM36W8MNMuek91otNfXPWX6wDiDY1toOr9Y+CcgaIX/1UL4FZATelyg4VDxWOF4nu+mDpdTd/efqbv/lqT9t58Jr0Xbx4q2l9bGDNJGGPh/XFXX9d1Pa9KaHj4LAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=389268374758e2101fc731b4116d432a"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=389268374758e2101fc731b4116d432a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=389268374758e2101fc731b4116d432a"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=389268374758e2101fc731b4116d432a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_389268374758e2101fc731b4116d432a^sys_idNOT IN019268374758e2101fc731b4116d433f,c19268374758e2101fc731b4116d4338"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_389268374758e2101fc731b4116d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>019268374758e2101fc731b4116d433f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_389268374758e2101fc731b4116d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_id>c19268374758e2101fc731b4116d4338</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:13:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_389268374758e2101fc731b4116d432a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_389268374758e2101fc731b4116d432a"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_389268374758e2101fc731b4116d432a"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>a97c7be34794e2101fc731b4116d4319</sys_id>
+        <latest_snapshot>389268374758e2101fc731b4116d432a</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch7-02-27-2025_03-06-2025_0935.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=a97c7be34794e2101fc731b4116d4319^sys_idNOT IN499268374758e2101fc731b4116d43ac"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"499268374758e2101fc731b4116d43ac","name":"plan","plan_signature":null}}</plan>
+        <plan_id>a97c7be34794e2101fc731b4116d4319</plan_id>
+        <snapshot>389268374758e2101fc731b4116d432a</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-22 01:13:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>499268374758e2101fc731b4116d43ac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-22 01:15:48</sys_updated_on>
+        <trigger display_value="">c59268374758e2101fc731b4116d43aa</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=a97c7be34794e2101fc731b4116d4319"/>
+</record_update>
