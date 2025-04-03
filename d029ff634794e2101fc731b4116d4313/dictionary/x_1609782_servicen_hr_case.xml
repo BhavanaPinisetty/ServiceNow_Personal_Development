@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3ce2ecd1476022101fc731b4116d4327" extends="task" label="HR Case" max_length="40" name="x_1609782_servicen_hr_case" type="collection">
+        <element choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Employee Onboarding" sequence="0" value="employee onboarding"/>
+                <element inactive_on_update="false" label="Resignation" sequence="2" value="resignation"/>
+                <element inactive_on_update="false" label="Internal Switch" sequence="1" value="internal switch"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Employee Email" mandatory="true" max_length="40" name="u_string_4" type="string"/>
+        <element label="Hiring Manager" max_length="32" name="hiring_manager" reference="sys_user" type="reference"/>
+        <element choice="1" label="Department" mandatory="true" max_length="20" name="department" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Finance" sequence="2" value="finance"/>
+                <element inactive_on_update="false" label="Enterprise" sequence="4" value="enterprise"/>
+                <element inactive_on_update="false" label="HR" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="IT" sequence="1" value="it"/>
+                <element inactive_on_update="false" label="Security" sequence="3" value="security"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Employee Number" mandatory="true" max_length="40" name="u_string_1" type="string"/>
+        <element choice="1" label="Designation" max_length="20" name="designation" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Engineer" sequence="0" value="engineer"/>
+                <element inactive_on_update="false" label="Trainee" sequence="1" value="trainee"/>
+                <element inactive_on_update="false" label="Developer" sequence="3" value="developer"/>
+                <element inactive_on_update="false" label="Systems Engineer" sequence="2" value="systems engineer"/>
+                <element inactive_on_update="false" label="Assistant Systems Engineer" sequence="4" value="assistant systems engineer"/>
+            </choice>
+        </element>
+        <element label="Employee Name" mandatory="true" max_length="40" name="employee_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="40" name="u_string_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="40" name="u_string_3" type="string"/>
+        <element label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date"/>
+    </element>
+</database>

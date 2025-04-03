@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=600432000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This flow is a add on to proceed with the IT onboarding</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>it_onboarding_subflow</internal_name>
+        <label_cache>[{"name":"86606fe0-c66a-4250-89e3-ea53a15e6d6d.Record.sys_id","label":"6 - Look Up Record➛User Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record.sys_id","label":"1 - Create Record➛User Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["conditions"]}},{"name":"subflow.configurtion_item.asset","label":"Input➛configurtion Item➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci","column_name":"asset","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["asset"]}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record.email","label":"1 - Create Record➛User Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"abd8143e-dc97-404d-b761-f91f1c6bf24e":["ah_to"]}},{"name":"subflow.name","label":"Input➛Name","type":"string","base_type":"string","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["name"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"481ea5ba-971e-43c4-ae2e-e964a36c3b4e"}},{"name":"171fb0d1-9285-480f-bd3d-bd4f8aee1d93.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"Bhavana Pinisetty","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"171fb0d1-9285-480f-bd3d-bd4f8aee1d93":["approval_conditions"]}},{"name":"86606fe0-c66a-4250-89e3-ea53a15e6d6d.Record.employee_number","label":"5 - Look Up Record➛User Record➛Employee number","reference":"","reference_display":"Employee number","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"employee_number","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}},{"name":"subflow.configurtion_item.company","label":"Input➛configurtion Item➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci","column_name":"company","usedInstances":{}},{"name":"subflow.configurtion_item.asset_tag","label":"Input➛configurtion Item➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"asset_tag","usedInstances":{"daa274e5-eb19-432d-abdc-cbe8a6ba6651":["conditions"],"64f93618-544a-4035-bc86-7c2b4aa9e355":["asset_tag"]}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.table_name","label":"1 - Create Record➛User Table","reference":"sys_user","reference_display":"User","type":"table_name","base_type":"table_name","usedInstances":{"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["table"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.configurtion_item.name","label":"Input➛configurtion Item➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"name","usedInstances":{}},{"name":"subflow.first_name","label":"Input➛First Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["first_name"],"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7092d319-0117-438f-b771-e34c57a8ebe4"}},{"name":"subflow.last_name","label":"Input➛Last Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["last_name"],"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"6c7ae4a2-9f54-40d1-9b9a-0737f1c4786e"}},{"name":"subflow.configurtion_item","label":"Input➛configurtion Item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","column_name":"","usedInstances":{"ada95223-8742-473b-b313-cf1fa142a9ce":["condition"],"b0998872-3a9b-4f9c-b8ec-e15caf5efe45":["cmdb_ci","asset"],"8518e8b5-bfe4-4857-a23f-6743283533f4":["request_item","cmdb_ci"],"c7fa64e7-4b8e-4478-bc8f-2a6ddedd8fca":["conditions"],"91f5667d-9940-4e8d-bc27-e9900a4a5622":["asset"],"daa274e5-eb19-432d-abdc-cbe8a6ba6651":["conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f65f95aa-e51d-4a99-9a99-0d401e57f87e","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"c7fa64e7-4b8e-4478-bc8f-2a6ddedd8fca.Record","label":"7 - Look Up Record➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"4ded2275-79ad-4e18-9ad0-4d46cfb5afc1":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.employee_id","label":"Input➛Employee ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["employee_number"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"82e0368c-9d09-47b4-844e-5df794281154","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.email","label":"Input➛Email","reference":"","reference_display":"","type":"email","base_type":"email","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["email"]},"attributes":{"uiType":"email","uiTypeLabel":"Email","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ea2bae4f-d394-487a-be7d-db96fefb83fb","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"8518e8b5-bfe4-4857-a23f-6743283533f4.Record","label":"2 - Create Task➛sc_task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","usedInstances":{"ad676414-967a-4e0f-a826-65470d1f3bb4":["record"],"171fb0d1-9285-480f-bd3d-bd4f8aee1d93":["record"],"150245f1-86d7-46fb-8ddf-6786ebdf8528":["record"],"abd8143e-dc97-404d-b761-f91f1c6bf24e":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8518e8b5-bfe4-4857-a23f-6743283533f4.Record.short_description","label":"2 - Create Task➛sc_task Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sc_task","column_name":"short_description","usedInstances":{}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record","label":"1 - Create Record➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"91f5667d-9940-4e8d-bc27-e9900a4a5622":["assigned_to"],"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record.name","label":"1 - Create Record➛User Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"91f5667d-9940-4e8d-bc27-e9900a4a5622":["assigned_to","requested_for"],"8518e8b5-bfe4-4857-a23f-6743283533f4":["universal_request"],"4ded2275-79ad-4e18-9ad0-4d46cfb5afc1":["assigned_to"],"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}},{"name":"b0998872-3a9b-4f9c-b8ec-e15caf5efe45.record","label":"6 - Update Record➛Asset Task Record","reference":"asset_task","reference_display":"Asset Task","type":"reference","base_type":"reference","usedInstances":{"51a9b2d8-14be-49c4-93a7-0fcedc7d1bb9":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.configurtion_item.display_name","label":"Input➛configurtion Item➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"display_name","usedInstances":{"daa274e5-eb19-432d-abdc-cbe8a6ba6651":["conditions"],"8518e8b5-bfe4-4857-a23f-6743283533f4":["cmdb_ci"]}},{"name":"daa274e5-eb19-432d-abdc-cbe8a6ba6651.Record","label":"5 - Look Up Record➛Configuration Item Record","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"86606fe0-c66a-4250-89e3-ea53a15e6d6d.Record.name","label":"6 - Look Up Record➛User Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}}]</label_cache>
+        <master_snapshot>e263c77a472022101fc731b4116d4341</master_snapshot>
+        <master_snapshot_digest/>
+        <name>IT onboarding Subflow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-27 19:45:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>37e01629472022101fc731b4116d4337</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_name>IT onboarding Subflow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name>sys_hub_flow_37e01629472022101fc731b4116d4337</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:43</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=37e01629472022101fc731b4116d4337"/>
+    <sys_variable_value action="delete_multiple" query="document_key=37e01629472022101fc731b4116d4337"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=37e01629472022101fc731b4116d4337"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=37e01629472022101fc731b4116d4337^sys_idNOT IN77e01629472022101fc731b4116d4338"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>37e01629472022101fc731b4116d4337</id>
+        <name>IT onboarding Subflow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-27 19:45:29</sys_created_on>
+        <sys_id>77e01629472022101fc731b4116d4338</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-27 19:45:29</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=77e01629472022101fc731b4116d4338"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=37e01629472022101fc731b4116d4337^sys_idNOT IN14569aa1476022101fc731b4116d43fe,20a5fbba472422101fc731b4116d43dd,605e4bf6476022101fc731b4116d4351,6b8c04c747a422101fc731b4116d43fd,a4a5fbba472422101fc731b4116d43d0,ea4b6b7e47e022101fc731b4116d4304"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=82e0368c-9d09-47b4-844e-5df794281154</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>employee_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Employee ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</model>
+        <model_id>37e01629472022101fc731b4116d4337</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-27 20:09:01</sys_created_on>
+        <sys_id>14569aa1476022101fc731b4116d43fe</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=14569aa1476022101fc731b4116d43fe"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7092d319-0117-438f-b771-e34c57a8ebe4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>first_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>First Name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</model>
+        <model_id>37e01629472022101fc731b4116d4337</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:52</sys_created_on>
+        <sys_id>20a5fbba472422101fc731b4116d43dd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=20a5fbba472422101fc731b4116d43dd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=email,uiTypeLabel=Email,uiUniqueId=ea2bae4f-d394-487a-be7d-db96fefb83fb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Email">email</internal_type>
+        <label>Email</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</model>
+        <model_id>37e01629472022101fc731b4116d4337</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 21:26:06</sys_created_on>
+        <sys_id>605e4bf6476022101fc731b4116d4351</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=605e4bf6476022101fc731b4116d4351"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=481ea5ba-971e-43c4-ae2e-e964a36c3b4e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</model>
+        <model_id>37e01629472022101fc731b4116d4337</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 01:58:00</sys_created_on>
+        <sys_id>6b8c04c747a422101fc731b4116d43fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6b8c04c747a422101fc731b4116d43fd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6c7ae4a2-9f54-40d1-9b9a-0737f1c4786e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>last_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Last Name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</model>
+        <model_id>37e01629472022101fc731b4116d4337</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:51</sys_created_on>
+        <sys_id>a4a5fbba472422101fc731b4116d43d0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a4a5fbba472422101fc731b4116d43d0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=f65f95aa-e51d-4a99-9a99-0d401e57f87e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>cmdb_ci</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>configurtion_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>configurtion Item</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</model>
+        <model_id>37e01629472022101fc731b4116d4337</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="cmdb_ci">cmdb_ci</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:40</sys_created_on>
+        <sys_id>ea4b6b7e47e022101fc731b4116d4304</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ea4b6b7e47e022101fc731b4116d4304"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=37e01629472022101fc731b4116d4337"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=37e01629472022101fc731b4116d4337"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=37e01629472022101fc731b4116d4337"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=37e01629472022101fc731b4116d4337^sys_idNOT IN2cdbf3f2476422101fc731b4116d430b,3271d48f47a422101fc731b4116d430d,38f64f7e472022101fc731b4116d4370,4ced2372472422101fc731b4116d4396,6518c3fe472022101fc731b4116d4323,7a71d48f47a422101fc731b4116d430e,d856daa1476022101fc731b4116d4344,e24b6b7e47e022101fc731b4116d432c,ee4b6b7e47e022101fc731b4116d432a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:44:54</sys_created_on>
+        <sys_id>2cdbf3f2476422101fc731b4116d430b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:07</sys_updated_on>
+        <ui_id>171fb0d1-9285-480f-bd3d-bd4f8aee1d93</ui_id>
+        <values>H4sIAAAAAAAA/+1X32+bMBD+VyqekwwCSUjeKkWRNmmrlHZ9aSpkzNF4cwwD0zZD+d93BkNo0tIoi9St6uOd78d3d98Zc5MbLDAmxsgN+zAe903fMk3bNN0BNV0bfHs0HNmEmkbHEGQFaJkAjZIA5XvCM6XIc3dgueD6g64fgtN13MGoS/p22B2OHLvv2gPbDp3evPDbbNAzYGnMyfpaB0ANXTIeJCCMyc1tx4hJgrkkJMYk3zmS6xg8Tnzg6DiNaLYCIc8+TzHGoXVU3vOqkN3CVA6UAx3dY0qJRwqP2THgUYIIALOFhKfQMVZEBERGydqYyCRDRQIkuBB8XVssmZBloSvymLLfGN7uK7sQsDKqm1CLnm5Q1ZuIUbiIJYtEqZHE51XjIp6txLeyAtVaCEnGZaO1WYrxIFaQFYgSYXi5jB7mVb4ZE0VxGi2PKOG1RKRMmJ9JSNU0gEPRkxWJYybuvDiJ7lnhjFBWvTuOQi/k0QPmTNmd6BGqcPewQaQ3Q/20UF+ThKkivmIYdN4UxXu/MpW3LEMD9oqay4LRKqUJi+U5xrwHjXDT0RT2aevo6XbSZbgtg1PqSZL+3Gfm9uA4gl6pRGfFdDoHg3zivA9as7MQPVGG1uS02smpNYew0zXfhp0a0X9Gz9eYaVptQw/c7ZAxHyIm3AsZ8OYlWx3sc7RxchxJZyrVE5IegLdyPtfZz2Ya8EuFaNoW4g5t+yekrflGxH2/1yptJQPY25n/iLJEtHDXW7K0GOmLHG5YnIrLB8CvnL+U+HepvFtWC5PtDyb/w0x2Bq1UgGduLxqJgCl8aYPP5Z0H6blYf7/J81QSyWhv6FrDcDSm1CSuaQ0d06IDYts+mI4PjmNtNrf7xP+bUMdtSH1hzzMOabUlB7SmfjZrv9ZW6R2pDxPtpPfEOdUr+u3W5H2+VGgrD8Lxdu5Bhu0gsvmMzhdGCXJhTBaGiAQsjM7CUFaeIkShRgsEVx8UujzfbEpNlhAdwGqIW++ArNPCMqVLCJBUhfaJpmS61p/yb/NSJzibIu5PV6zxjXm9a/Uva1b6P9tIvTV1JWXnWPMLMzjZF8b5WJzG4iBM5tVPafyg4BV09Dbd/gFT99GOVhEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>c49a926f-474b-4aa5-91ac-ad1f465bdba8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 02:19:31</sys_created_on>
+        <sys_id>3271d48f47a422101fc731b4116d430d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:07</sys_updated_on>
+        <ui_id>150245f1-86d7-46fb-8ddf-6786ebdf8528</ui_id>
+        <values>H4sIAAAAAAAA/+1UW2/aMBT+K1GeASUk0JS3SghpD2slVvWlqyInPgGrjp3ZDpQh/vuOEwfoZR1CSNOk5c3HPue7+Isftz6j/sSPgQbhdTjOozCKhkEwTOIwG0dZOKQRAQj9ni9ICXhSQS4VxfWK8NoWtttkFCaQZKN+VkDcj5PRVZ8Mo6I/voqjYRKNoqiIB/Omb7fDTsp0xcnmwQ3ASr5knCoQ/uTxqedXRCGWAeVPtm+2zKaClJMMODZOZV6XIIz3ZYozTtXRdc87IW+FWQxcUzc9ZbaIW5ZPGPR8eDEgKCBcQbiGnl8SQYmRauNPjKqxoIDQO8E3+xNLJkyrtCQvmv3E+XFgzxWA0nLnwn6ZOoc6cyTL4a4yTIq2YkjGO+ckr0tx20qw3kJBam6OvK01zoPKUrYkWobFt6Vczzu8GRONOseWy5zw/YoYo1hWG9D2OoBDY0pJqoqJRVopuWJNM1IpBwuOi0HB5RoxNVuIAckt7wEaRAYzrE+b8gNRzIr4imOwedeIT3/UFreV4QinjeZGcNpcFB7VuWKVucHBK3A0dz0X5Gz0WQDy68N9H808hFnnqSH6+X1IDxvnZfXeonm3LdqpTF81/4a5S+urmgvr6GJhTf5SWB2jfyytf8poMPz0kTq66SaW+iifa6meUyFR3vc6CCJ6vwTvRmswHtMe1j3CrR8GqGekZ3AXHVXv43z2nDPTDyWiG/Ba/N7JPnQDZgw41R8Y08XfAaQrB7B/ry/2D4TjoPn+P9sXfLaffgHJNtjSgQgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <attributes/>
+        <comment>create a catalog task saying that assign the asset to employee</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:53:54</sys_created_on>
+        <sys_id>38f64f7e472022101fc731b4116d4370</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:06</sys_updated_on>
+        <ui_id>8518e8b5-bfe4-4857-a23f-6743283533f4</ui_id>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4bORubEdZLmVmDIaWuBbegOTWvQNh0LkyVXkttmQf77KMtu+oF2QTGgGzAgh+iRfHykKPpiy3jBFgxnMUzjOEnicRTF9MvKcXE8jo4xT+azJGchk1AjeVowP1ILmUDCbkC0DjR56nBCCm4aAZvzZ4a84qLQKNni4jJkDWiis6jZYvvEZDcNpgIyFBT/zSUKTl3q8GClj4JfUO6ydBgdU+n5lS6coChkeGdRFkj5ShAGQ1aDLMAqvWELq1sCNEJxJsXm3qPi0hIhc753hv8k9nnk/Eqk0nL0tvtj2jfKw3mleI5njeVKesTr9EYl2lqe+iJci7GEVtihxYS0hviwcZKdiF5R+bVSt1+GhEsuu+p6o1A5iPsTWKt51lo07j4yIL5BQH99KLAm8rSGpuFynTZa3fCOkPTVo7Wgw6gU6paEGL6WI8hdMSPqGoyWhH/s4HPQ3BF/JhoK3nUdSa9bp8XX1leR+kaQg8k1b+wJ0d1gL3gX9mM7eXUYptn+8kuOoki7eTUPBjeviyzN+aql2GK7NW3mahjlSpZ83WpXQsot1rvdlamUtq66Tg8ZfNCJcXUFIAP6hzawKrAVBmtSKwO6GH1FpVKzQHh/jdckwWJxBV0kFqlVff7V8HxWbLFiJ5mGCurgE5c0AnLFwpXX3VlhXh7PsyzCLJ5EVP1RgmNIxuNkEk1LjKFz7y6xczcbkzo1HewOvDiQZvf8Vf/v2kFde+PKw5qKsRj4bocHT/pAsHSj7qPNiw9g2H99Mm/Y78Dx6zuwRw5ZgtMkit5pD/pN/eY1+D4r78FX6jfLryxfG4nZbH/3t8Dtg6UXPX/RHfPbR5Ya/WHZUxyqbQj+7sU9ltqPZ6aUQJD7uZz8sbk8+kc/zn/Xh/jyF/3rUNJBCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:43:57</sys_created_on>
+        <sys_id>4ced2372472422101fc731b4116d4396</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:36</sys_updated_on>
+        <ui_id>86606fe0-c66a-4250-89e3-ea53a15e6d6d</ui_id>
+        <values>H4sIAAAAAAAA/9VYy27bOhD9FUFr25X8kOzsLhoYKNA2QJt2kxsQFB8xUZpUKSqpY/jfOxQl23H8iuOi6ZLkzPDMzJljyjfzUNDwIqSjaMRHo8EwjaJeL4qSpEdwnGW9hGRRhvthK1R4ysDS4kwyWN5jWbr1fN5N+GDAGG2DYdzu82zYxtGQtElCRoyno24ywJ3KDbkYiwV4U1HkEs++10Fgh0yEpIap8OLmthXm2ICpZSa8mG8c2VnOkMQZk+B47cIGnx201tGZPHF+npm7oFlWiGFPG+qwRK2Q/bJMUQZXcSwL1gqnWFFstZktdwzD9ErJ1cZEKOuznOJfhXiE8MPI2XEGaZG6AsslqqvTFEYLwq5yK7TyOx6oP9SynKrPPgFXV8ZxKe1aXcsC4rHcYXYgakT860Q/fGkuHAtVpVcfSk2wXK6wtUZkpWWF6wWTbAqB0BTnuVB3KDf6XlTOgGXauZOw6HCpH+DSQtypDiYOeAdKhDtj2L+str9jI1wWnyAMOAMgIaHbyBe90KWpqnKPiCyL6sBgVfhY4aKqFfpZOpQ+6zo/5EsEBgUxIrf/gcM9q1NZtBqyD/ZSZLSiBNGKCndnscb4YlYgQf8vwZkeyX7DCDCo4z23DcBZYp42Qu/Xczy2PludtxWtHqYne/UwxWcbpn4U/aVxsqZ8e9N0aD58wgeGJKZ7SUBX/S60schXbm1KzijyY8EkfSLyR4BrnK8c2YJstgtvTVDu7thQ++4/r/Zvkp4AiCJfb6GkUNWPLQA9D28He6mRxRs8qNq/pu1uDxfkOXtxYHXweLrKVn1t+HsEyMbxKyAKrj3KLcAbfW3C19TtnY26ve7LqAvEuZkv0S+rtqXAzZvKta6xf3T2eNMe2LXmEC9ul9R/f9qd8Uvv7Lo7N2az96LhXGeWP7ncQbAzv9h2DFvrT073BFzr+5AfVvQg6B2zq9sbK6rtA5Y/tp3X7FrOUJXeq19/8d4PhGzt9Sc4mkKfRA5PUv/aKhA2DHFdKorqx+iKNq5vXJjC1sbPNeQLs6VRgYaRC+yEBZV1sLQ+h7IckV3j+IEHTXo1hiKA9IIqvWCZ3suKsUOP+md8671Gj8ZYyKr08FGRr/WOGaPNDk060LU97T9SsI4EFZ8V1OsVbRvftyrbAaz/xBfqa1WHMJz1uzhJe3EcRXFE02iYpvEwyXiC0z5fDRpChSIgixCZAzEgPGqI0HQ1ei4tXhtP/hsFNPfduA5xLN7G+VIr9+HaTW3gAEOfgwbw4ZRqvci0lgyrFT0Hf00w3so/LaW43qyN3/q4rWl/6se8FN+U+FmyD44UQxZ1hzEl7WEap+0+p0l7RPGgjUfZIO1RRvr89N/n298sBKLTjBQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:58:51</sys_created_on>
+        <sys_id>6518c3fe472022101fc731b4116d4323</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:07</sys_updated_on>
+        <ui_id>ad676414-967a-4e0f-a826-65470d1f3bb4</ui_id>
+        <values>H4sIAAAAAAAA/+1UUW/aMBD+K1GeASUk0JS3SghpD2slVvWl7SInvoBVx85sB8oQ/33nxAHabh3qkKZJy9ud7+77vvMX3299Rv2JHwMNwstwnEdhFA2DYJjEYTaOsnBIIwIQ+j1fkBKwUkEuFcV4RXhtE9ttMgoTSLJRPysg7sfJ6KJPhlHRH1/E0TCJRlFUxIN507fbYSdluuJkc+cGYCZfMk4VCH9y/9jzK6IQy4DyJ9tXR2ZTQcpJBhwbpzKvSxDG+zTFGafq6LrnnZDXwiwGxtRNT5lN4pHlEwY9H54NCAoIVxCuoeeXRFBipNr4E6NqTCgg9Ebwzb5iyYRplZbkWbPvOD8ObF0BKC13W9iHqdtQtxzJcripDJOizRiS8W5zkteluG4l2N1CQWpujnZba5wHlaVsSbQMiy9LuZ53eDMmGnWOLZc54fuIGKNYVhvQ9jqAQ7OUklQVE4u0UnLFmmakUg4WHINBweUaMTVbiAHJLe8BLogMZpifNuk7opgV8RnHYPOuEZ9+qy1uK8MRThvNjeC0uSgs1blilbnCwStwNHc9Z+Rs9J4B8svDfR/NPJhZ56kh+umtSQ8HH/PqrUXzrlu0U5m+aP4Fc+fWFzln1tHZzJr8JbM6Rv+YW3/n0WD47iN1dNONLfWRP9dSPaVCoryHOggiersE70prMN6SaC8DEB7RljJQT8j1g/iqDTHQFkdvbf3H8z74N0CJLAx4LY/eyXvpBswYcKp/sqjud3AA6coB7N/vs/0T4Thovv/P+Bmf8ccf2fu8CZEIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>c49a926f-474b-4aa5-91ac-ad1f465bdba8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 02:19:31</sys_created_on>
+        <sys_id>7a71d48f47a422101fc731b4116d430e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:07</sys_updated_on>
+        <ui_id>abd8143e-dc97-404d-b761-f91f1c6bf24e</ui_id>
+        <values>H4sIAAAAAAAA/+1XUW/bNhD+K4SebVW2LNnOW9YgWIG1HdKge2gKgSIpi4skqiQV1w3833eUKMuKG8ews6wD8qgj7+67u+8jqS/3DqfOmTOhMy+Mkwmeev7Y97zZeD6P/XnizaZzb0SoM3AKnDPYKRkR0nzf4awyhvv7WTCasVkcDOOETYaTWTAd4rGfDMPpxB/P/MD3k4l7Vfut1+BJuSozvPpsA4CFpDyjkhXO2ZevA6fEEnJpJp2z+wdLelWyKMMxy8DxQpAqZ4VG7y4gxqF1tN7XWC6YRldtPQ/rM6ngm9okETdGWDKwvIHDvmtWUAZJE5wpNnByXFCshVxtLJJh+rHIOkPKCw0hz5UShGPNFNIpQyzHPENLrlOEUZPedUy874r/AAj+2IRKGDSBGES8IJwCImfLHNmewvK7bpmkghP2sdRcFE2jNY6ztuciq/LiQ1O1mQpLcJXpralUCuKy0pRpcGtZQQ3Jp1Qsr9q8l7yoG2ILzATB2eYLay15XEGd9SAzhmUXL6ohmZiQiWWs7nGOy5IXi6iU4o7XgQFm7i4y+HCTTCzBX/FF4WJianKh4di9BPtFbf6MJTcFvocw4LyuGxR9qwympsR+crM3qucOWxWRvNTnEPiO2RLWAyuP0Xwfreiko89WzE4iikQaq9td6ncLxyng2mRDH5pshyLtOT+C3JK/Z7PcH53E/WsgvG6U11AdaQtjw/eZ1+f7Izx/dn5boEcT/N8hMcxVRQ03bW118ifJ/RSlvTCM4zAOpn5HlDlJ6DROQjwlfkeMJZxUMsfyNqpPqi1ej3YZbQV9JJ3B+c1lXd7gYJStM5x7WUUZ+quFu68Cy+9YCDiVio7c45PI3TARaYFgdtkKjvNNZmPsDnudYo24QgrG5aJrgbgFv+UxQCtRobxSGrZpWOnJpndDTF5EMXa01nrx07n/LyR1qnSC/Wcs7oiH00iL3ltpHCZBwBgdejEeDSdJPBtib0aGJCRzlkzn4zDArh1xzZX1Gu2q7Og4x+nyE8ykWLSaPKD8jaDFbi+s9FQb0yrP36+85vGxI7ytS8N7vTZ61wZlGc95PdxGnafSnu6dO/N6oyZki/bP+ObvU/EASK3j27e7+B6h4uS4S+CViy/HxdHe/zwW9mYdvwwZD8DUOv72gI3xPjoGr3T81ekY7B896Q1bVfHfjOgtSp4rVT/sjNk8INtX6gOePrbtWS71pyvYOG7w/6ymR0gcvl7vv9ITFu8ddzLun06CrrbYelN5nk9KZBAONS9WOWFSCB1DG27rRXrj3DTbmPnfl+xbxZRmFOGawUusUCHglyYzjQO7i/6E3zDFEElxsWD1j1KzVUjzKyUFJmltBcrgBZMogYVcSIYo0yAC5Tag3pRN1l3tWND/MajjlPr79fs/Wp0eMLjNJdOMbWeOVqGpzrNOn9MTL5kwCPzwVaHbt0y5pGMqRVna2k66ab7+A1x28XOqFwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Adding him to the user record and assigning email</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-27 20:09:01</sys_created_on>
+        <sys_id>d856daa1476022101fc731b4116d4344</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:06</sys_updated_on>
+        <ui_id>26f55eed-0ba1-4fb8-a08c-c6c9ef79265a</ui_id>
+        <values>H4sIAAAAAAAA/9VUW2vbMBT+K0XPxthxF9q8DUbe1sIufek6c2wdJwJZ1iQ5rRfy33d0SdqmDZQxGPWbvnP5vnPz7ZYJzhZsXmLx4bKct1VZVbOimF2cl828asoZrwDxnGVMQY/k6aCRWIdHxjYgRw/aydajRUMQF1ZLmG6S5XtE27WQ3KBii9u7jGkwFO/IstgemdyksZbQoKTgb57r7CpyvVXns+ATuj3LMTYY7gUVGcMHh4oj8XUgLWasB8XBDWZiC2dGAgwCv1ZyOnishXKUkHnfByt+U/aLwvt1SKW1GG2HZ526FOF2PYgWr7UTg4pIEJaMgxx7dRWL8P3FDkbp9v0lhBpfc9ResheRFHVf18P9lz3hUqhQXTLKoQV5eIFzRjSjQ+vngRJ7SlT3oLVQq1qbYSNCMGnp85WkR97J4Z5IrVipHFovPKcOQb4k/FOAb8AIX8VnSkPBu1B9/Wv0vLGOpLiORZODbY3Q7iOl22ASt8v2C8qxuDw5+LJ5HHTYSftkOTthrAtT/jEWRcW3Wzs2voD80bLb/ZRwwutgICfsQchjhwAGo5bDhLRRY9+geemWzIKT82tMkeTlEb3DCv7y4D0DODyLlWdvnv0+wVKg5PaVZdhffCKoN4kgXX35r66+nBfh+z+3H3W+s9N/8hc+8RO4+wPHQogxpwYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:40</sys_created_on>
+        <sys_id>e24b6b7e47e022101fc731b4116d432c</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:36</sys_updated_on>
+        <ui_id>64f93618-544a-4035-bc86-7c2b4aa9e355</ui_id>
+        <values>H4sIAAAAAAAA/+1WTW/bRhD9KwseXZEmKZGR1JNR12gOjQG78CUOiOHuUNpi+dHdpWJV0H/P7JJUlDR1jcBAUaC6CDucj/dm3g75/hBIEayDBYo4WSU5nyfzeRrH6XKRlPm8TFIxB8QkmAUN1EieGnmrBZ13oHpnOBwEQPpmgVmIZbIKF/NUhFAKHvISl5CXkOdZEt35uOORIoU0nYL9w5iALHwrldDYBOv3H2ZBB5pqWdTB+vDVI7vvsFBQoqLA65b3NTaWvb2mHC/lMUXfTUS+JuZq0FmM2QvpjPTI4UniWYBPFhuBVK4CZXAW1NAIsK3eB2urezJoBHHbqP3JYysbOzCt4cnIPyn/InZ+FRI1PnbhdCzGDk3NaSXH287KthksFko1da5Vfd28Gyi43mIFvbJnve0N5cPOQXYgBoTV/bb9eDfVu5GNZzeiVS0HdTqBtVqWvUXjxoEKfVNq6DrZbIpOtzvpgwlKHW0UHaJKtR+pppGbJgLucEfUIIhuyH7tzQ+gpSPxK6Wh4KMnX/zRu7oDjRFw4Tl7woUfFLkarmVnryjxDkeYx9ko5DJ7TgB89XneZzk/i5nXoiy4/KtIf2qbSm56DY4Ne2ux/m7Z/uYKs3dD4ZeC/iL4b0iMwv3CNuo2ezXdLv8l3Y6I/mPC/Se5xumz++ps0l6h5kyqYBweFIVtH/s4novDYZnncV5hHPI8h3CRZnG4XOE8RMjmkGSYi1yMizgye0Ob7Vv7+PUSf+f9wJrgWGQDoNmLOzUluJGohPlG66YLMhYodmOB03J/tVuS5LH//b/jX2/HT0YH8Uyj7visd3B58dhcXFxxjsYwh+/yygNmDjDrDXFkdousEoW3tOXvyG3E7n0CVvfGMo221w0D5jUTMZfx1smGNX1d0p80rK0qg5aVe/ZDwmTDfta61ewX0o9yJe5xaJMHswOp/Hug9TM3bJQD6zsC1mmC6mIeg+gxYFDRrZnguXB8ApIwrgmNZmbbakst52y4rpNjRDPdbFBHvNckARt5Rzczz4uq/uhyjcxOWZzxksZjYIfi4fSRl+ZVliGKMC4hCRdVuQwhXtJHXs5XWL1ZpXkG0fANFbkh0gI4Ho8fPgG8PYpIYQoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:40</sys_created_on>
+        <sys_id>ee4b6b7e47e022101fc731b4116d432a</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:02:07</sys_updated_on>
+        <ui_id>daa274e5-eb19-432d-abdc-cbe8a6ba6651</ui_id>
+        <values>H4sIAAAAAAAA/9VY227bOBD9FUHPjlfyTXbeFgkMBOg2QJvtSzYgKJKyidKkSlJJE8P/vkNRkh3f47ho+sjhXM7MnBlTvp+HnIaXIR1Fo2w06g+TKOp2o2gw6BIcp2l3QNIoxb2wFUo8Y6BpcSoYHB+xKNyZzGiKCAcJ5SYX+PlbdXGlZMYnhcaWKxncWDYDHTLlgmomw8v7h1aYYw1OLdPh5Xztyj7nDAmcMgGu7lzM4LMD0Doa7yvjTfwuQH1E0rtWmjosUStkPy2TlEGoDAvDWuEMS4qt0s+NRDNMb6VYCqZcWvAYOuWfhr+A+2Hk9DIGaRHm75ojqurlxWSqOGG3uSuWl3ig/lKJYiY/+wRcpVmGC2HrSoOkMOCP5Q6zA1Ehyr5O1dOXOuCYyzK96lIogkVzwtZqnhaWGdcLJtgMHKEZznMuJyjX6pGXxoBl1p4IOLQzoZ4gqOET2cbEAW9DiXB7DPLrUvwNa+6y+AfcgDEA4gK6jXzRjSp0WZVHRERhyguNpfG+wkVZK/SjcCh91lV+yJcIFAzRPLd/g8Ejq1JZtGpK9/dSZLSkBFGSchfTrPAaG8MsIJ38V4A9nc9NkbqM26TitTNAHGjdblQXi80xONnPaaNytZrLsXXYarytONXQvJJVQxOfbWh6UfSbxsbq4uNNzaE58AkfGIaY7iUBXfbbKG2Rr9zKNGzy+mSGjjkT9NUyPwJcbXzryBakz7vwVgTNXIy1rd7547f6h6QnAKLI15tLwWX5owpAz8Pb/l5qpPEaD8r2L1lbyrAhW7ZyYFXwcvqWLfta8/cIkLXhV0AU3HmUW4DX+7V2X1G3ezbqdjtvoy4Q537eoG+qtqXA9dvJta7Wf3H6eF0f2LViEC8eGupfnRYzfmvMjou5NpvdNw3nKrP8zfUOgp35ZbZj2Fq/crqnYFrFQ35Y0ROnE2aX0WstquwTFt+33VfsamaoTO/dr7x474dAuvLK4xmaQZ94Dk9PzQhQwSCsGcpUISmqHp1L2ri+ZVwbWylv7pAvzBZaBgpGLrBTFpTaQaN9js1yRHa14U0W1OlVGEwA6QVlekGT3tuKsWMf9c741nvPPhpjLsrSw8dDvtI7prXSO3bSga7taf+RC+tIUPFZQb1/o23j+9bNdgDrH/El+t6tQxhOex08SLpxHEVxRJNomCTxcJBmA5z0suWgIWQkgbUInjMgBrhHNRHqrkabq8XvxpP/LoGd+9e4cnEs3tr4Wkn3pdpJbOAAQ5+DGvDhlKp9kSolGJZLevZ/28L4KP+oFPxuvTZe9Glb037Vj3nB/5X8R8FuHCmGLOoMY0ouhkmcXPQyOrgYUdy/wKO0n3QpI73s9N/nh/8Bvd9odloUAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=37e01629472022101fc731b4116d4337"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=37e01629472022101fc731b4116d4337^sys_idNOT IN3a71d48f47a422101fc731b4116d430c,b0f64f7e472022101fc731b4116d4372"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3e71d48f47a422101fc731b4116d430b</block>
+        <comment/>
+        <connected_to>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 02:19:31</sys_created_on>
+        <sys_id>3a71d48f47a422101fc731b4116d430c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:41</sys_updated_on>
+        <ui_id>c49a926f-474b-4aa5-91ac-ad1f465bdba8</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">34f64f7e472022101fc731b4116d4371</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:53:54</sys_created_on>
+        <sys_id>b0f64f7e472022101fc731b4116d4372</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:41</sys_updated_on>
+        <ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</ui_id>
+        <values>H4sIAAAAAAAA/+1UTY/TMBD9KyjnNHKSprS9VaCVkICV2NVeYBVN7Elr4cTBdtotVf8743x0K7YVCO2RS1W/8bx5bzyTQ6Bb17TO3uuVtXJdB8uvj2Ega4/R/0NQQ4XBMuC6FtJJXecdEAZbUK0PrJrG6C0KgoS0jYL9w8sI30glDA7sDRjicGiC5eG3kNs3mCsoUBHBnTOyXlO6FHQqGZTxgsc8TWZpwlgyn8bFLC3iRKSAkNK9MfHdKPbNxw4Jr7rw9Qi3YyVthJcVszDAJ4e1IPnLEpTFMKigFuC02Z8QgyBua/UMbGTtiC7wl5+s/EncSZb5iyWSR4598HTMh5b1MN9oyfG28QJ7xEGhhhyuVVvVn3sfvtlYQqvc2GxCWkt82HjRXsUgqbzb6N2XseCNrDuDQ1BpDup0AkdtKFqH1j8MKqyIKK+gaag5uX9M2SWTlipaKzpEpdI7KuonJwLuhUfUI4huCH/fwQ9gpHfxiWgouZdZgJU876aM6JwhC8euLfmP1gvqDQ5W8r4bdMFyIxu3ojpbHFQfw5cjejadh0P8Ni4LJuLJIplnk+mclZNCpIJ+puUcEGOxSCPoRhVUbh04PB6/tYylAq6O9mvRvsZeLCArs5hll/diOru0Fxc24voyJH9YBv98f7kLjLH/y3C+DNLm/VAP3rri/7wLj37w+wq2nxuBXFoScu+xD+NX3Qf2NACSn0M7bb57C8/Y8Rdr6PuxHwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=37e01629472022101fc731b4116d4337"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=37e01629472022101fc731b4116d4337"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337^sys_idNOT IN28a5fbba472422101fc731b4116d43d4,638c44c747a422101fc731b4116d4301,6a4b6b7e47e022101fc731b4116d4308,a4a5fbba472422101fc731b4116d43df,d856daa1476022101fc731b4116d4301,e85e4bf6476022101fc731b4116d4354"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>last_name</element>
+        <help/>
+        <hint/>
+        <label>Last Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:51</sys_created_on>
+        <sys_id>28a5fbba472422101fc731b4116d43d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:17:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>name</element>
+        <help/>
+        <hint/>
+        <label>Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 01:58:00</sys_created_on>
+        <sys_id>638c44c747a422101fc731b4116d4301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>configurtion_item</element>
+        <help/>
+        <hint/>
+        <label>configurtion Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:40</sys_created_on>
+        <sys_id>6a4b6b7e47e022101fc731b4116d4308</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 23:32:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>first_name</element>
+        <help/>
+        <hint/>
+        <label>First Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:52</sys_created_on>
+        <sys_id>a4a5fbba472422101fc731b4116d43df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:17:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>employee_id</element>
+        <help/>
+        <hint/>
+        <label>Employee ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-27 20:09:01</sys_created_on>
+        <sys_id>d856daa1476022101fc731b4116d4301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-27 20:09:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>email</element>
+        <help/>
+        <hint/>
+        <label>Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 21:26:06</sys_created_on>
+        <sys_id>e85e4bf6476022101fc731b4116d4354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 21:26:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_37e01629472022101fc731b4116d4337"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_37e01629472022101fc731b4116d4337"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_37e01629472022101fc731b4116d4337"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This flow is a add on to proceed with the IT onboarding</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>it_onboarding_subflow</internal_name>
+        <label_cache>[{"name":"86606fe0-c66a-4250-89e3-ea53a15e6d6d.Record.sys_id","label":"6 - Look Up Record➛User Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record.sys_id","label":"1 - Create Record➛User Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id","usedInstances":{"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["conditions"]}},{"name":"subflow.configurtion_item.asset","label":"Input➛configurtion Item➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci","column_name":"asset","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["asset"]}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record.email","label":"1 - Create Record➛User Record➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"abd8143e-dc97-404d-b761-f91f1c6bf24e":["ah_to"]}},{"name":"subflow.name","label":"Input➛Name","type":"string","base_type":"string","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["name"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"481ea5ba-971e-43c4-ae2e-e964a36c3b4e"}},{"name":"171fb0d1-9285-480f-bd3d-bd4f8aee1d93.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"Bhavana Pinisetty","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"171fb0d1-9285-480f-bd3d-bd4f8aee1d93":["approval_conditions"]}},{"name":"86606fe0-c66a-4250-89e3-ea53a15e6d6d.Record.employee_number","label":"5 - Look Up Record➛User Record➛Employee number","reference":"","reference_display":"Employee number","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"employee_number","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}},{"name":"subflow.configurtion_item.company","label":"Input➛configurtion Item➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci","column_name":"company","usedInstances":{}},{"name":"subflow.configurtion_item.asset_tag","label":"Input➛configurtion Item➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"asset_tag","usedInstances":{"daa274e5-eb19-432d-abdc-cbe8a6ba6651":["conditions"],"64f93618-544a-4035-bc86-7c2b4aa9e355":["asset_tag"]}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.table_name","label":"1 - Create Record➛User Table","reference":"sys_user","reference_display":"User","type":"table_name","base_type":"table_name","usedInstances":{"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["table"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.configurtion_item.name","label":"Input➛configurtion Item➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"name","usedInstances":{}},{"name":"subflow.first_name","label":"Input➛First Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["first_name"],"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7092d319-0117-438f-b771-e34c57a8ebe4"}},{"name":"subflow.last_name","label":"Input➛Last Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["last_name"],"86606fe0-c66a-4250-89e3-ea53a15e6d6d":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"6c7ae4a2-9f54-40d1-9b9a-0737f1c4786e"}},{"name":"subflow.configurtion_item","label":"Input➛configurtion Item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","column_name":"","usedInstances":{"ada95223-8742-473b-b313-cf1fa142a9ce":["condition"],"b0998872-3a9b-4f9c-b8ec-e15caf5efe45":["cmdb_ci","asset"],"8518e8b5-bfe4-4857-a23f-6743283533f4":["request_item","cmdb_ci"],"c7fa64e7-4b8e-4478-bc8f-2a6ddedd8fca":["conditions"],"91f5667d-9940-4e8d-bc27-e9900a4a5622":["asset"],"daa274e5-eb19-432d-abdc-cbe8a6ba6651":["conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f65f95aa-e51d-4a99-9a99-0d401e57f87e","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"c7fa64e7-4b8e-4478-bc8f-2a6ddedd8fca.Record","label":"7 - Look Up Record➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"4ded2275-79ad-4e18-9ad0-4d46cfb5afc1":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.employee_id","label":"Input➛Employee ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["employee_number"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"82e0368c-9d09-47b4-844e-5df794281154","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.email","label":"Input➛Email","reference":"","reference_display":"","type":"email","base_type":"email","column_name":"","usedInstances":{"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a":["email"]},"attributes":{"uiType":"email","uiTypeLabel":"Email","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ea2bae4f-d394-487a-be7d-db96fefb83fb","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"8518e8b5-bfe4-4857-a23f-6743283533f4.Record","label":"2 - Create Task➛sc_task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","usedInstances":{"ad676414-967a-4e0f-a826-65470d1f3bb4":["record"],"171fb0d1-9285-480f-bd3d-bd4f8aee1d93":["record"],"150245f1-86d7-46fb-8ddf-6786ebdf8528":["record"],"abd8143e-dc97-404d-b761-f91f1c6bf24e":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8518e8b5-bfe4-4857-a23f-6743283533f4.Record.short_description","label":"2 - Create Task➛sc_task Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sc_task","column_name":"short_description","usedInstances":{}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record","label":"1 - Create Record➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"91f5667d-9940-4e8d-bc27-e9900a4a5622":["assigned_to"],"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"26f55eed-0ba1-4fb8-a08c-c6c9ef79265a.record.name","label":"1 - Create Record➛User Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"91f5667d-9940-4e8d-bc27-e9900a4a5622":["assigned_to","requested_for"],"8518e8b5-bfe4-4857-a23f-6743283533f4":["universal_request"],"4ded2275-79ad-4e18-9ad0-4d46cfb5afc1":["assigned_to"],"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}},{"name":"b0998872-3a9b-4f9c-b8ec-e15caf5efe45.record","label":"6 - Update Record➛Asset Task Record","reference":"asset_task","reference_display":"Asset Task","type":"reference","base_type":"reference","usedInstances":{"51a9b2d8-14be-49c4-93a7-0fcedc7d1bb9":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.configurtion_item.display_name","label":"Input➛configurtion Item➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"display_name","usedInstances":{"daa274e5-eb19-432d-abdc-cbe8a6ba6651":["conditions"],"8518e8b5-bfe4-4857-a23f-6743283533f4":["cmdb_ci"]}},{"name":"daa274e5-eb19-432d-abdc-cbe8a6ba6651.Record","label":"5 - Look Up Record➛Configuration Item Record","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"86606fe0-c66a-4250-89e3-ea53a15e6d6d.Record.name","label":"6 - Look Up Record➛User Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"64f93618-544a-4035-bc86-7c2b4aa9e355":["assigned_to"]}}]</label_cache>
+        <master>true</master>
+        <name>IT onboarding Subflow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:38:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e263c77a472022101fc731b4116d4341</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:42</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=e263c77a472022101fc731b4116d4341"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=e263c77a472022101fc731b4116d4341"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e263c77a472022101fc731b4116d4341^sys_idNOT INaa63c77a472022101fc731b4116d4342"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e263c77a472022101fc731b4116d4341</id>
+        <name>IT onboarding Subflow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:38:27</sys_created_on>
+        <sys_id>aa63c77a472022101fc731b4116d4342</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 20:38:27</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=aa63c77a472022101fc731b4116d4342"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=e263c77a472022101fc731b4116d4341^sys_idNOT IN2263c77a472022101fc731b4116d4344,35a53fba472422101fc731b4116d43c9,3da53fba472422101fc731b4116d43de,8e0f8b3a476022101fc731b4116d4302,a99c84c747a422101fc731b4116d4389,bf4bab7e47e022101fc731b4116d435e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=82e0368c-9d09-47b4-844e-5df794281154</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>employee_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Employee ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</model>
+        <model_id>e263c77a472022101fc731b4116d4341</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:38:27</sys_created_on>
+        <sys_id>2263c77a472022101fc731b4116d4344</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2263c77a472022101fc731b4116d4344"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6c7ae4a2-9f54-40d1-9b9a-0737f1c4786e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>last_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Last Name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</model>
+        <model_id>e263c77a472022101fc731b4116d4341</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:57</sys_created_on>
+        <sys_id>35a53fba472422101fc731b4116d43c9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=35a53fba472422101fc731b4116d43c9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7092d319-0117-438f-b771-e34c57a8ebe4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>first_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>First Name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</model>
+        <model_id>e263c77a472022101fc731b4116d4341</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:57</sys_created_on>
+        <sys_id>3da53fba472422101fc731b4116d43de</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3da53fba472422101fc731b4116d43de"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=email,uiTypeLabel=Email,uiUniqueId=ea2bae4f-d394-487a-be7d-db96fefb83fb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Email">email</internal_type>
+        <label>Email</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</model>
+        <model_id>e263c77a472022101fc731b4116d4341</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 21:29:12</sys_created_on>
+        <sys_id>8e0f8b3a476022101fc731b4116d4302</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8e0f8b3a476022101fc731b4116d4302"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=481ea5ba-971e-43c4-ae2e-e964a36c3b4e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</model>
+        <model_id>e263c77a472022101fc731b4116d4341</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 01:58:08</sys_created_on>
+        <sys_id>a99c84c747a422101fc731b4116d4389</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a99c84c747a422101fc731b4116d4389"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=f65f95aa-e51d-4a99-9a99-0d401e57f87e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>cmdb_ci</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>configurtion_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>configurtion Item</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</model>
+        <model_id>e263c77a472022101fc731b4116d4341</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="cmdb_ci">cmdb_ci</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:45</sys_created_on>
+        <sys_id>bf4bab7e47e022101fc731b4116d435e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bf4bab7e47e022101fc731b4116d435e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=e263c77a472022101fc731b4116d4341^sys_idNOT IN3e63c77a472022101fc731b4116d4371,7881188f47a422101fc731b4116d4388,7c81188f47a422101fc731b4116d4389,7ddb37f2476422101fc731b4116d432b,9b1807fe472022101fc731b4116d4319,a23e2b72472422101fc731b4116d43b4,bb4bab7e47e022101fc731b4116d4372,d31807fe472022101fc731b4116d4317,fb4bab7e47e022101fc731b4116d4371"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Adding him to the user record and assigning email</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:38:28</sys_created_on>
+        <sys_id>3e63c77a472022101fc731b4116d4371</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:09</sys_updated_on>
+        <ui_id>26f55eed-0ba1-4fb8-a08c-c6c9ef79265a</ui_id>
+        <values>H4sIAAAAAAAA/9VVwW7bMAz9lUJnw7DjLmhzG1rktLXAuuXSdQZt0YkAWfYkOa0X5N9HWXISpAm2AbskN733KD5SDP28YYKzGZummHy4TadllmbZJEkmN9dpMc2KdMIzQLxmEVNQIyktFBLz4RCxNcjOgaY3eWdQE8SFaSX0i8B882i5EpJrVGz2/BKxFjTFW2JmmyPqb91IKFCS9Kuzc8ad7duT2KfD2KsHTzSaOz9JxPDNouJIRiqQBiNWg+JgG92zmdUdARqBPyrZ7xQroSxdyJz2zYhflPYmcboKqbISPbc75qFJHq7uwcIT3VzaTgdpuWpEicb3hGMFnbR3h5gXPLZWNMqHDGWG6EZ2tXrwLWG7C8Y3IYQeK+fYujqd81BG9bRqXr+MLudCDS0JpGxKkLsTWKtF0VnnZ8NQYk0X5TW0rVDLvNXNWgzB5KWOl5IOcSWbV0pqxFLFUDrjMbUV4jnh9wO8AC1cFZ/pGgreRm6w7iQYs6+Fmpj/7JwTX1moIfdtcCGlFq39SAnWGOxuo3HMOSa3ZwcrLfaDNEy2ORjxSmhjhyn63iVJxjcb0xWupHjPbLc/yOxp1Y4gEdYg5LFgAAeylU2PNLFdXaB+Lwu04CQ+lcknef9XvMAK/nFt/Pl1x7UxFyi5OfHc485wJsFi7p//aG8E8moRyLA70v+1O9JpMvwuaIP44i5+gRx8K86skpffpolr0jMHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>c49a926f-474b-4aa5-91ac-ad1f465bdba8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 02:19:40</sys_created_on>
+        <sys_id>7881188f47a422101fc731b4116d4388</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 02:19:40</sys_updated_on>
+        <ui_id>150245f1-86d7-46fb-8ddf-6786ebdf8528</ui_id>
+        <values>H4sIAAAAAAAA/+VVwU7jMBD9lcjntkqatITeEFWllViQCuqFRZETT1oLx87aDtCt+u87SZy2AgRlxaXa3GbGM37v5U1yvyGckQmJgPnBeTDOwiAMh74/jKMgHYdpMGQhBQhIj0haAJ7UkCnNMH6ioqoTm008CmKI01E/zSHqR/HorE+HYd4fn0XhMA5HYZhHg3nTt91iJ+OmFHS9cAMwk624YBokmdw/9EhJNd5lQZPJ5lXpWLCCpiDw6LxD+xq9XZd1zFRWFSBtwrvkleucuor3Y4oVbKrhBH6PwIsFyQCB5FQY6JGCSkat0msysbrChAbKbqRY706suLQt0YK+GP4Hb478+lwOyCxzIuzCxAnUpvMptfQWJ2e20ju9FM/AtJowyGkl7OVhrj1wU1quZNtiaSq6biWqQl63ipDdgIP3URkEAWXNs0be0spvV+p53oGccdlI4igKlVGxi6i1mqeVreFsCAhoNC5oWXK5TEqtnnjTjFCKwVJgMMiFesY7DV/KAc1q3ANUlQ5mmJ826QXVvCbxE8dg87ZHzNpcCmrMngpqmPyuaiQtMUchaVRoJEgaJ9TNmealvcCrnsAB3/bcOqSjjxyWne8NdTBzvxImSyw1j2+tvi98zfFH4Okcf9e85/fxOdO/yV0d9nrXbcFZfvRtlo9PyfKOxsl7/jOn+8MPv6UHTmrMbQ5c/qz0YyIVEv5V+X7I7lbgXRgD1uPGw7xHRa2QBeZZ5Vmsosb67VL885yv7dARTLsdmnEQzLxDvVsgKJCAhaSV4tUSuaK3cMXdv+PbNikY+81zQvv03/xCHv4CDbQJylMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>c49a926f-474b-4aa5-91ac-ad1f465bdba8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 02:19:40</sys_created_on>
+        <sys_id>7c81188f47a422101fc731b4116d4389</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 02:19:40</sys_updated_on>
+        <ui_id>abd8143e-dc97-404d-b761-f91f1c6bf24e</ui_id>
+        <values>H4sIAAAAAAAA/+2YXXPaOBSG/4rG1+AajA3kLptMZjuTtjtJpnvRdBhZlrE2suVKcijN8N/3yJYxHymFhJ0ms7nk6OvV0fv4SHx5cFjsnDiDeOSFUTLAQ8/v+5436o/HkT9OvNFw7PVI7HScHGcUekpKhDS/7zEvTeDhYRT0RnQUBd0ooYPuYBQMu7jvJ91wOPD7Iz/w/WTgXlXjFgsYGTNVcDz/bCeACEkZjyXNnZMvXztOgSWspal0Th42mvYVy3FEOXS9wXJKNbpqRG9uQs8L8zsWpMxoriesCV7aCc5tC3p/Di0wyKjyOg79rmkeU5CTYK5ox8lwHmMt5HwZkRTHn3LeBlKWa5jyVClBGNZUIZ1SRDPMOJoxnSKMamGuY+b7rtgPEOf3zVQJhRwQo5XlhMWgyFkJT2xKofl925ycY42vtSyJLuUy04IRqupsxjTBJddnq7G6w6dCM5HXQzSOeDNa8DLLP9ZJdJYTrJxkqUAMLUxuzGZhcdh4cp2K2VUj9oLlVRZtVrggmC9/JdcUS5JeMMrNUedlFkHfjoO1liwqtZEJpuDQq11nUkk1a0FPyml1lBkuCpZPJ4UU96xaEORn7pTDDzfhYgbjFZvmLiZmry6cHnYvIH5ehT9jyczGP8A0MHjRcdRcnXGsVLt9yP/kW2nU18lYl2NGTyrDmcFEskKfwlL31G520bHw9ca7/BwPWt+uzNkCqMhEY3W3DVbbcBhfe+hp+TLeeFyfZWsrdrk6Fn2sGyxZvQPJqv1lwboBmnQNfM0R0lbeEqaRtw7TTyB6GfAskdibnnVK/hsSwCRqUtvZ7q1a/AmE/IoLLwyjKIyCod/6cEySeBglIR4Sv/XdDL6mMsPyblJ9TVfg6G1jYb8ThzGxh5aGCfgC8zKm6O9G1C6dFpJICPik5ZuEgNJ3F1V2l4T0n1V7amsiLRAcJp9DxVlKMsG2HukUa8QUUnBaLroRiNldrYzooLkoUVYqDd00tKzBt1bEBi+XO2sHGz1/1CuvAszjAxjsLgS4NTZOJ1qsXQr7YRIElMZdL8K97iCJRl3sjUiXhGRMk+G4HwbYtU6pLLdYoG1WnzzPYXTvsdFlxRPbu7YQKzjjfLrB8HUTtPz6u/mtC9oWvisFzHu5KL0WUoxwzjJWGaJm/PjwxDs9Rb01GxGyAs8Rnkh7LN4Y+uxsW8khhh48rSC9OfrVObq3891NwzUfRce29B6rN5b+Y8PT0cGmDt5M/T8xdbDbVmTNSKqM/qFErxj7VKnqxmvC5mbd3Os33P6zbgdeU36ttUHgeqn0MfWHoBC+XVh+OwnHtz3eaaWkv/79FPF8xfO3pef5pEBGc1ezfJ4RKoXQESTmrmqMb53buhs1f8pI+q2kStMY4YqDGVYoF/Bi5CaVEHfRX/D8VRSRFOdTWr1D665CmpeqFJikVRSch6dUogQaMiEpiqkGlJRbi3pX1KtuE2hF/2ZRh/G+xyEtS159RFtnZklPdcY3OP/z5sNlS/nwmQUvDAI/fOP82RWvmMX9WIqisHs7ctX7+i+hjFNR8RkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:44:59</sys_created_on>
+        <sys_id>7ddb37f2476422101fc731b4116d432b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:44:59</sys_updated_on>
+        <ui_id>171fb0d1-9285-480f-bd3d-bd4f8aee1d93</ui_id>
+        <values>H4sIAAAAAAAA/+1XXW/aMBT9K8jPwBISIPBWFVXatLVSu/WlVJHjOMWbcbLYacui/Pc5tvNRaCmsvLD20ffL596cY8c3OSAhmIKxFw3wZDKwAtuyHMvyhsjyHBw449HYgcgCXcDgEsvIFKM4DeX6HtKsNOS5N7Q97AXDXhBht+d6w3EPDpyoNxq7zsBzho4Tuf1LlVcUMjMkPKFwdW0KSAtaEBqmmIHpzW0XJDCVewmcgmm+5toVLIUBpjL0skK7jl6sknIdxihbYiZ8Uhm/msyZ8XQ+z6RHJpVwrC7AjwKzEEscEaQcd8ESshCKOF2BqUgzaUgxDC8YXdURC8KE7nMJHzn5Izd2BmVchGVjyMygXvpmPtoczaCAV7IyEllajysmCHM9khBHMKPitG3TAReJIDHTKQIGtMqOabZk53ogoC7Q+hwZlyBwUvZZItdtRVeL+OGyAnlGmJqIaZHGCNJ6BYVISZCJEk4OMMVqxEuYJITd+Uka3xOVLKEs+3dULvoRjR/knpzcsT5EJe6+nCrsn0n7TJmvYUrKJr7JMjK56AK+4qcUct60Imfo/85KJLox04KvpqBHUOahlCTiRO5yjw3momuEEKCt3EINlXS5Rgcc+QLyX5v8bhz70XwHKBXNvxssa9AMydXSV76nHFdpnXPtMBS3t1PcWBqOa3I8Q3HPOiKKm7aOnuOv0duyt3Eq9BoOSQSyB0j9iGDaPu8rxybRW579mL4DqorpJ2aPzpmB9RJcw321fI77Kn+N+4M9uf/y+e5Z1jHR/z2d8Ggr2bDTcOpnnKVsiwL8BeGKGS8qoRWxnyJ2AFkp4otGuS6IdfD/ogfnQw//vx7c4VaqtX4ralajmIWkRMxbqtAnM+YnbPXjJs+5gIKg/sizR9F4gpAFPcseuZaNhtBxAmy5AXZduyhuN+XzllL76WyH5uunREYxf20YRmW1MzVJbaXVV1hV0ajNPdTj4sjE9l7+vdBWrkWThlthJgcERft1kc+Bhj0H0zlgMcNz0J2DMsovyaXMMkKCqx3KludFoS1ZCk0Bu7VsskO44iqSowUOJTeV9YnFV2Iw9kM85XeYSaW/WYY7Mz2UzTEZ3dU49VzIxi13ZQJUpU/fSfu2Gx7stnM/5PdW+UmYxK8fFPIqk6ffATV5+xcFxK26+RIAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:58:59</sys_created_on>
+        <sys_id>9b1807fe472022101fc731b4116d4319</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:44:59</sys_updated_on>
+        <ui_id>ad676414-967a-4e0f-a826-65470d1f3bb4</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU+jQBT9K2Se2wYKrdg3Y2OyiauJGl/8IBfmYicOAzszWLtN//teYGgbNa5mfTHL29yvOedwLtysmeBsxiLkfnAYTLMwCMOx74/jKEinYRqMeQiIARswBQVSpcas1JzOTyDrJrBex5MgxjidDNMco2EUTw6GMA7z4fQgCsdxOAnDPBpdtH2bDXVyYSoJq2s3gCLZQkiuUbHZzd2AVaDpLouazdYvUh8FKyFFSaUXPdqX6O2qas68zOoClU1EHzx1nXOX8X7MKUNNDZzAHzB8tqg4EpAcpMEBK0BxsKVesZnVNQU0Aj9XcrWtWAhlO6IFPBvxm26O/KYuR2KWORG2x8QJ1IXzOVi4pMmZrfVWr1JkaDpNOOZQS3u8H+sKzisrStW1WEhl313KulBnnSJsO2DvfdSGQGDV8GyQd7Tyy0W5vOhBngjVSuIoyjIDuT2BtVqktW3grBlKbDUuoKqEekgqXT6JtpmgFKMHSYdRLssl3WnEgxpB1uAekaowOqH4vA1fgxYNiZ80hpo3A2ZW5liCMTsqpGHyq26QdMQchaRVoZUgaZ3QNGdaVPaIrnpCB3wzcOuQTt5zWHa4M9TezN1KmCyxYB5fW32X+JzjP4Cnd/xV+57fxudM/yp2ut/rnXUJZ/nJl1k+/k6WdzS+vef/5nR//O63dM9JrbnNnsuXpX5MVEmEb2vfD/nVAr0jY9B6CzBeiqg8wkkkkHuqXN6qe2PBYlccvl6Of573uZ36APN+p04ESm7ekKJfKCyIiMWkk+bFUrmkd+2S23/Jl21WMPXb5xvt13/zS7n7A5exwVtjCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:45:30</sys_created_on>
+        <sys_id>a23e2b72472422101fc731b4116d43b4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:42</sys_updated_on>
+        <ui_id>86606fe0-c66a-4250-89e3-ea53a15e6d6d</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOtlfyh2TntkhgoEC3AZpsL21BUCQVE0tTKkUlTQz/9x2KlC3Yim1hFSDBHjWcId/MvDek/X3jc+pf+XQRLNLFYjaPg2AyCYIomhAcJskkIkmQ4Kk/8CVeM/DUOBEMPh+xKM33ZjOO0tmMMToEx3A4TZP5EAdzMiQRWbA0XoyjGR5VYcjssd1CNOVFLvDzN7cJWMiKC6qY9K++/xz4OVbgqpnyrzYHS5fiFThhAlzvHeAD/Po5331WuJztczPM+2IXMkUNlGDgs9+aScoAQ4pFwQb+GkuKdaaedxbFML2VYm9Ycaltkmv8u+AvcO48MH4pg6yIK8DuE7niWHN6gzW+06okulS7WmWcsMLWg7IUl0JfN23W4TbXPJM2xKZtozNRruUXWw5/t0GjF2UBIFhuEjXIXRrp3Sp7+lqjXHJZ1cQtioxgsfvCWiuelNrg2fhMsDVshNY4z7l8QLnKHnkVDFjWowcBH6NUZE9waMEf5AgTA3wEdcWjJdhvKvM3rLjJ4i/YBoIBEBfAEGRbWGSlqkr5iIgoi2pBYVnYvfztwC+ei2uBi2KfOZQc/SoNblsHlzGyRTMhRPFc/wlbPDKX3HZQS2Z2koKLPeVIJik3KIqGbgAN4vRHCcH0Qg0pRoCIIxvZJqNe9uwoxPNVqIV43SxDW2mcJI9sn9s2cJIMe5PkNAg+kijh8Penye4qsyU4I7WQniQZ3fOpyJRGtpYNrfVw4VwAoeb5rWGmlzy/hsrRPOVM0LabZ2kWDm6e8f/z5nmXJAdAFNnucSm4rJ4RAPSt2D87Sb0kPOBZRa/GPWNsuCDHGsCezryXzkq4AE6thDs427u3eFog1vO+oszhrK+NTgCT3gQwGfcjgM0uzV0hW2pevxxNN2v/F+OPD/2Bgo2AcNsmsE5nhl3PHG+PBTzppOAm2ezKzSuc6/mJ+YoiB285AlYQ6s5DVr/oidMHpven1140009Y/NO27hiH6kZV6b3BczU8+YspaTxXeYrW0Dmew6vaPg8LhBVDaVZKitx7ek8k08mUq0I75+NB85WBfqSXgTA9vWJe5e3tvDtexOfzqEv5KfXqRNxphQeJeFUi3i6Rbml3GVrTHh+nfQ+tJeai6gb8VMob7WRKZeqVwXWmkScYceFUuxBU2Cuo/z722iTQOv7OYP0Qv7v7H02E4WQ6xlE8CcMgCAMaB/M4DudRkkY4nqZ7jSJUSALTFHZOgSqwPaqpUfc5OJ4/dqR2HTQXoKopeJNJ86N7HGvPwIL+ejWs88DdQEmyTDAsDybKPdwTfywdfsfX2bubKh/iX6iS3x9W2ppaa/1W74aS/y35r5J9MhSbs2A8DykZzuMwHk5TGg0XFM+GeJHM4gllZJr2+RT4+S/hkkbN7hUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:45</sys_created_on>
+        <sys_id>bb4bab7e47e022101fc731b4116d4372</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:42</sys_updated_on>
+        <ui_id>64f93618-544a-4035-bc86-7c2b4aa9e355</ui_id>
+        <values>H4sIAAAAAAAA/+VWTW/bOBD9K4SOWUuRbEu13VOQbLAFug2QLHJpCmFEjmwuqI8lqTRew/99h5TkGGmQpkAuwfpicDgzfG/mDamvu0CKYBXMUcTJMsn4LJnNpnE8XcyTIpsVyVTMADEJJkENFZKnRt5oQet7UJ0z7HYCYPphjmmIRbIM57OpCKEQPOQFLiArIMvSJLr2cfs9RQppWgXb2yEBWfhGKqGxDlZfv02CFjSdZVEHq92TrdeCVVCgItfrEe1T9HbburVoeFdhbXM5Gj8PkRfDDvt0QTsU5OAk8STAB4u1QAJSgjI4CSqoBdhGb4OV1R0ZNIK4qtX24LGRte2JVvBg5L908jx2fiUSMz4U4bDMhwL15vICLNxQZm47fahXIzmaviYCS+iUPT+29Q5XrZVN3YdYKNQY3aiuqr/0FQkOCY760RkCga3j6ZD3tMqbTfP9egR5KWtfkoGiajiowwqs1bLorIOzC1Chr3EFbSvrdd7q5l76YIJSRWtFi6hUzXc608h1HQF3uCOqKkSXZL/w5lvQ0pH4k9JQ8H4SmK05V2DMIxWqYf5P55D0xAYKua+CL0HuleCCuZatPaOj7nEAvp8M41CkLymMLx8FdZTzcSR4JYqcyx+lft7UpVx3Ghw/9sli9cvifwW0Ufx/+ZY/D3XQ/w+2z8ex7Eu/Mag/fTP1L96T+gca717+PxN9PH3xWj1Skte5ORI8gSCEKHLb3HVxPBO73SLL4qzEOORZBuF8msbhYomzECGdQZJiJjIxPAoREaEL+Lm34e0S/9qUvaIW45RdSlTCPFOcccSwIkYW875YT8Zs2GS3w+bhoXmzWUuy2P/e0cT9X96b0ehAHyndLV/0Dk5P7uqTkzNO9TfMIT498xSYo8A6Q6yZ3SArRe4tTfE3chuxG5+AVZ2xTCP1t2bAvC4j5jJeOfWxuqsK+pOGNWVp0LJiy35LmKzZ71o3mv1BMlTuiBvsC+fB3INU/tFovAoMG1TFupaAtZqgupi7ILoLGJQ0eyM8F44PQJOAK0Kjmdk02lITOOuHfnSMqMvrNeqId5pEYSPv6LroedGpH12ugdkhizOeUnsM3KO4PXy2TrMyTRFFGBeQhPOyWIQQL+izNeNLLD8sp1kKUf/BGLkm0jWy3++//QeLTb4MMwsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <attributes/>
+        <comment>create a catalog task saying that assign the asset to employee</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:58:59</sys_created_on>
+        <sys_id>d31807fe472022101fc731b4116d4317</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:44:59</sys_updated_on>
+        <ui_id>8518e8b5-bfe4-4857-a23f-6743283533f4</ui_id>
+        <values>H4sIAAAAAAAA/+1WTW/aQBD9K9aeETUQA+EWJeKUJlJTpYeQWGPvGFZdr53ddRKK+O+d9dpAPpqStodEqsSBffPh92YfY65WTHA2YTgawHAwiKJBLwwH9EmyHj/shYeYRuNRlLIOU5AjZVow32MLiUTC7kBWDjRp7HBCuDClhOXls0C6EJJrVGxydd1hJWhqZ1GzyepJaF8+EhKUlPq14fISP7ssPUbHuE7w2OlubXDmA4Xmjk/YYfhgUXEkIhlIgx2Wg+JgC71kE6srAjQCP1dyuclYCGWpIXO5D0b8oMeOQ5eXISlL0cc2x7iZk4ezE7BwQZ1TW+kmNV0UIkXjZ8Ixg0ra413MJ5yXVhTKl3jVvrqQVa7O/EjYpkF7LYRUhkhg6XQ65o2M7GJR3H9pWU6FqkfSBGWRgtycwFotkso6PiuWAPVrCTRXjhJzah7nUJZCzeNSF3eibkj88u5c0qGbyeKeiBgxV11InZgujRq6U8JPavgStHCNP1MbKl53mFmaYwnGbPXRYOPbyrHzahtdsR+NK0m1KO0RPeAOGwnrTmP+/qtmGyZbc2UCJY9r15sd+6c5T+JUzCqq5auVqRKnqpsWKhPzSjtRsbCYr9c3ZlFo6/TWfCjgi46MUxqACugb2sAWgV1gMCe2KqCr0jcknsYH0udrvCUKFvkN1JXIY1s0z5+1P8IZm8zYUaJhAXlwKhSZQs1YZ+Z511EYZ4fjJAkxGfRDUn8QYQ+iXi/qh8MMB1Cn19dap9PgY8emht1B8D3brJ/vhv9T22tqb1uce3i5XZxTZ+bgsjXzyxZvNyjmNBuLPvB0izZB32u7SXuvb9IG2WeVDqMw/Ejb1L8k/niZvpfFufMu/c0KzbLXbDcabf11D8LurM7w+V6oO7/Z+HswaI3/zVN4TKgxelIUEkE9dTjd56dpw6txd/+fufvgI1n7b/8ovBdv/8rR1z8BmWWYxhMLAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:45</sys_created_on>
+        <sys_id>fb4bab7e47e022101fc731b4116d4371</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 16:06:53</sys_updated_on>
+        <ui_id>daa274e5-eb19-432d-abdc-cbe8a6ba6651</ui_id>
+        <values>H4sIAAAAAAAA/+VY32/jKBD+Vyw/pzk7v9O3U6tKlfa20ra3L3srhAEn6Ah4AbfbRvnfbzA4iRI3iXdTqdU9Mgzwzcz3DdjfljGn8WVMp8k0n06Hk3GS9PtJMhr1CU6zrD8iWZLhQdyJJV4w8LQ4EwyGj1iUbkwWNEOEg4VyUwj8/DVMXCmZ81mpseVKRreWLcCHzLmgmsn48tv3TlxgDZtapuPL5c7UqagEzpgA14cAawelfS7WQ1TNedun7WXRZz+hNHVQkk7MflomKQMMORaGdeIFlhRbpZ/XFs0wvZNiY5hzaWHH2Dn/NPwFzp0kzi9nEBVhfm49RCFd3pxfY4vvrS6JLXVwJXPFCTM+H5TluBT2atvmHe4Kl2C/xIftVytRLuRnn454vUFdHbCUBkCwwgXqkIcw8vu5evpSo7zhsspJmBSKYLEeYWs1z0rr8CxjJtgCNkILXBRczlCh1SOvFgOWRXcmYNDNhXqCQw2fyS4mDngX8oq7N2C/rsxfseYuir9gG1gMgLgAhiBfQqNKXaXyERFRmmpCY2n8XvGqE5tncyWwMZvIIeXoR+lw+zyEiJFPmltCNC/sn7DFIwvBrTq1MIYHKTjdUI4oSblDYbbUAUCYBeyzf0pYT5dLU2YuB10S1OEWIA7i6K5dV6t9Mf3yPi0FdzzaWnBX2+E2pSBIb8/2qWmDIL30bNIbJMlHEh8c/v60115NPgVHJJXSgySjGz4ZpS3yudzS1L46WvP8BAg1z+8cM6Ps+TVUgeY5Z4I23TA3bmLnhun9P2+Yd0lyAESRrx6XgsvquQBA34r9w4PUy9IdnlX02nC/smFDGm6IyKropbUSToBTK+Eezo4ePJ4GiHW/ryiz2+trYxBA/2wC6PfOI4DlOsx1IhtyXr8QXTVr/xfnj3f9gYJbC9JVk8BanZm2PbO32hdwv5WCt8nmZ65f4dyZn5KvKLLzli1gDkvDecjrFz1xOmN2c3rtRZV9wuLfpvnAOFQXqgrvDZ6l6cEvo2zrWcpztIDK8QJez5oRIIdBWDOUq1JSFN7NGyK5SuZcGxuc9xvNFwb6kZECYUZ2zqLKO1p7t7yIj8dRp/I2j+pAwmkmgkCiKpBoHUi7sNs0rcEZH6fnblo3mIuqGvBJVGyVk2mt9CuN60ghDzDixK52Iqj0rKB+v+01SaCx/R3B+iG+r8/fmgjD2aCHR+N+miZJmtBxMhmP08koy0d4PMg3GkXISALdFHbOgSqwPaqpUdc52e8/vqW2bTQnoKopeK2k+8rujW3kYEF9oxrWceChoWRKCYblTkd5gHvij5uAP/B1+O66yof421Tyh91Me1Njrt/q3VDyvyX/UbJbR7EJS3qTlJKLyTgdXwxyOrqYUjy8wNNsOO5TRgb5OZ8C3/8D3GeDjLwVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=e263c77a472022101fc731b4116d4341^sys_idNOT INb881188f47a422101fc731b4116d438c,d31807fe472022101fc731b4116d431b"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3e71d48f47a422101fc731b4116d430b</block>
+        <comment/>
+        <connected_to>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 02:19:40</sys_created_on>
+        <sys_id>b881188f47a422101fc731b4116d438c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:42</sys_updated_on>
+        <ui_id>c49a926f-474b-4aa5-91ac-ad1f465bdba8</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">34f64f7e472022101fc731b4116d4371</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="IT onboarding Subflow">e263c77a472022101fc731b4116d4341</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:58:59</sys_created_on>
+        <sys_id>d31807fe472022101fc731b4116d431b</sys_id>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:42</sys_updated_on>
+        <ui_id>3ea0cfde-26ef-4ff2-aa3a-2545e4f7c155</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K5OfQ+QkwIA3RFVpUrdKa9WXrYpubAesOXFmO1AW8d93nQ9ALdVWrY97Qfhc3+tzDveIhujaVbWz93pprVyXZPHtMSCy9Bh+b0gJhSALwnTJpZO6TFsgIFtQtS8sq8roreAIcWkrBfuHlxW2kYob0U+vwOAMJwxZNM9KkmNjTiGP5ixiSTxNYkrj2TjKpkkWxTwBAQkOVJAJhVdXA60PNy0SvMrX7SuPW2dkue7PN/2UuwHUhntWEQ2IeHKi5Mh+kYOyIiAFlBycNvsjYgTw21KdgI0sHY4j/vKTlb/wwXgy8RdzgRKZ6IrHY9o71sH5FThAKjVztemvso2WTNjOHC5yqJVbnWPdhdvKS+1aHGRq6NaqLsovnSPkOGD4gRCpLZIQlVfqqfc68ruN3n0dWF7LsnWlLyrNQB1P4NC7rHaeT0OEEgUOSguoKnQ09Qsg22bkUoRrhYcwV3qHj/ptC4F54iEaC+E14lct/ABGehWfcQw2dzQzsJKl7WbiOLRJkENA7N6uFFh7Eonupj9rT7GT3ItLO398CzOyckt8eSt6HYfg5aKf7XjTRB+jPKM8Gs3j2WQ0ntF8lPGE48c4n4EQEZ8nIbQLDyq1Dpw4HL7XlCYcXg3Ie419W7rmMMknEZ1cTtd4eildF3L1xkjFf4iU/z3/MlGU0v+R+udISZt2Qei1tY+/Y6IefXy6N49eM2mR2r3HPg3/ML6wx+WS7BzaafPDizphh98LjQssqwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=e263c77a472022101fc731b4116d4341"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341^sys_idNOT IN219c84c747a422101fc731b4116d4397,3b4bab7e47e022101fc731b4116d4366,3da53fba472422101fc731b4116d43d1,75a53fba472422101fc731b4116d43e3,ca0f8b3a476022101fc731b4116d430e,fa63c77a472022101fc731b4116d435c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>name</element>
+        <help/>
+        <hint/>
+        <label>Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 01:58:08</sys_created_on>
+        <sys_id>219c84c747a422101fc731b4116d4397</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 01:58:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>configurtion_item</element>
+        <help/>
+        <hint/>
+        <label>configurtion Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 23:32:45</sys_created_on>
+        <sys_id>3b4bab7e47e022101fc731b4116d4366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 23:32:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>last_name</element>
+        <help/>
+        <hint/>
+        <label>Last Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:57</sys_created_on>
+        <sys_id>3da53fba472422101fc731b4116d43d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:17:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>first_name</element>
+        <help/>
+        <hint/>
+        <label>First Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 00:17:57</sys_created_on>
+        <sys_id>75a53fba472422101fc731b4116d43e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 00:17:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>email</element>
+        <help/>
+        <hint/>
+        <label>Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 21:29:12</sys_created_on>
+        <sys_id>ca0f8b3a476022101fc731b4116d430e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 21:29:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>employee_id</element>
+        <help/>
+        <hint/>
+        <label>Employee ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:38:28</sys_created_on>
+        <sys_id>fa63c77a472022101fc731b4116d435c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ServiceNow_Asset_Managment" source="x_1609782_servicen">d029ff634794e2101fc731b4116d4313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow_Asset_Managment">d029ff634794e2101fc731b4116d4313</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 20:38:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e263c77a472022101fc731b4116d4341"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_e263c77a472022101fc731b4116d4341"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e263c77a472022101fc731b4116d4341"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>37e01629472022101fc731b4116d4337</sys_id>
+        <latest_snapshot>e263c77a472022101fc731b4116d4341</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch7-02-27-2025_03-06-2025_0935.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=37e01629472022101fc731b4116d4337"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=37e01629472022101fc731b4116d4337^sys_idNOT IN3e63c77a472022101fc731b4116d437b"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@628b2a86</plan>
+        <plan_id display_value="IT onboarding Subflow">37e01629472022101fc731b4116d4337</plan_id>
+        <snapshot>e263c77a472022101fc731b4116d4341</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 20:38:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3e63c77a472022101fc731b4116d437b</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 18:32:43</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
